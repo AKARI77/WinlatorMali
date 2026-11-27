@@ -503,6 +503,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 show(new SettingsFragment(), false);  // Forward animation
                 break;
             case R.id.main_menu_ai_assistant:
+                if (drawerLayout != null) drawerLayout.closeDrawers();
                 AiSettingsDialog.show(this);
                 break;
             case R.id.main_menu_about:
