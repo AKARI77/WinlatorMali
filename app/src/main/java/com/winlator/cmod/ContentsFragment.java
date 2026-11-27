@@ -350,8 +350,8 @@ public class ContentsFragment extends Fragment {
         input.setHint("https://.../contents.json");
 
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getContext(), isDarkMode ? android.R.style.Theme_DeviceDefault_Dialog_Alert : android.R.style.Theme_DeviceDefault_Light_Dialog_Alert);
-        builder.setTitle("Custom Catalog Source URL");
-        builder.setMessage("Enter the direct URL to a valid contents.json catalog:");
+        builder.setTitle(R.string.ui_custom_catalog_source_url);
+        builder.setMessage(R.string.ui_enter_catalog_url);
         builder.setView(input);
 
         builder.setPositiveButton(R.string.ok, (dialog, which) -> {
@@ -850,7 +850,7 @@ public class ContentsFragment extends Fragment {
             holder.llDownloadProgress.setVisibility(View.VISIBLE);
             if (task.state == ContentDownloads.State.INSTALLING) {
                 holder.horizontalProgressBar.setIndeterminate(true);
-                holder.tvProgressDetails.setText("Installing...");
+                holder.tvProgressDetails.setText(R.string.ui_installing);
             } else if (task.percent >= 0) {
                 holder.horizontalProgressBar.setIndeterminate(false);
                 holder.horizontalProgressBar.setProgress(task.percent);

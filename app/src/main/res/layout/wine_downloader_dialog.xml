@@ -11,7 +11,7 @@
         android:id="@+id/TVWineDownloaderSubtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select a Content Source to download Wine or Proton runtimes:"
+        android:text="@string/ui_select_a_content_source_to"
         android:textSize="13sp"
         android:textColor="?android:attr/textColorSecondary"
         android:layout_marginBottom="10dp" />
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="No Wine or Proton runtimes found in this source."
+            android:text="@string/ui_no_wine_or_proton_runtimes"
             android:textSize="13sp"
             android:textColor="?android:attr/textColorSecondary"
             android:visibility="gone" />
@@ -89,7 +89,7 @@
             android:id="@+id/TVProgressTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Downloading Wine runtime..."
+            android:text="@string/ui_downloading_wine_runtime"
             android:textStyle="bold"
             android:textSize="13sp"
             android:textColor="?attr/colorAccent"
@@ -115,7 +115,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Downloading: 0 MB / 0 MB"
+                android:text="@string/ui_downloading_0_mb_0_mb"
                 android:textSize="12sp"
                 android:textColor="?android:attr/textColorSecondary" />
 

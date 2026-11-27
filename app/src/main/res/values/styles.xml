@@ -152,6 +152,22 @@
         <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 
+    <!-- Quick-prompt chips in the AI chat panel: small, tappable, one line each. -->
+    <style name="AiQuickPrompt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:background">@drawable/ai_tool_chip_bg</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:textColor">#C9D8E6</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
     <style name="ContentDialog.Dark" parent="@style/Theme.AppCompat.Dialog">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>

@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.winlator">
+    <!ENTITY TERMUX_X11_APP_NAME "Winlator:X11">
+    ]>
+<resources>
+    <string name="run">运行</string>
+    <string name="edit">编辑</string>
+    <string name="remove">删除</string>
+    <string name="add">添加</string>
+    <string name="shortcuts">快捷方式</string>
+    <string name="containers">容器</string>
+    <string name="input_controls">输入控制</string>
+    <string name="no_items_to_display">没有可显示的项目</string>
+    <string name="new_container">新建容器</string>
+    <string name="edit_container">编辑容器</string>
+    <string name="creating_container">正在创建容器…</string>
+    <string name="removing_container">正在删除容器…</string>
+    <string name="duplicating_container">正在复制容器…</string>
+    <string name="installing_system_files">正在安装系统文件…</string>
+    <string name="updating_system_files">正在更新系统文件…</string>
+    <string name="starting_up">正在启动…</string>
+    <string name="waiting_for_render">正在等待游戏渲染…</string>
+    <string name="waiting_for_container_render">正在等待桌面渲染…</string>
+    <string name="unable_to_install_system_files">无法安装系统文件</string>
+    <string name="keyboard">键盘</string>
+    <string name="toggle_fullscreen">切换全屏</string>
+    <string name="exit">退出</string>
+    <string name="no_control_element_selected">未选择控制元素</string>
+    <string name="scale">缩放</string>
+    <string name="shape">形状</string>
+    <string name="type">类型</string>
+    <string name="binding">绑定</string>
+    <string name="binding_secondary">次要绑定</string>
+    <string name="binding_up">向上绑定</string>
+    <string name="binding_right">向右绑定</string>
+    <string name="binding_down">向下绑定</string>
+    <string name="binding_left">向左绑定</string>
+    <string name="overlay_opacity">叠加层不透明度</string>
+    <string name="profile">配置</string>
+    <string name="select_profile">选择配置</string>
+    <string name="profile_name">配置名称</string>
+    <string name="name">名称</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="untitled">未命名</string>
+    <string name="no_profile_selected">未选择配置</string>
+    <string name="no_profile_found">未找到配置</string>
+    <string name="do_you_want_to_remove_this_profile">要删除此配置吗？</string>
+    <string name="do_you_want_to_duplicate_this_profile">要复制此配置吗？</string>
+    <string name="do_you_want_to_duplicate_this_preset">要复制此预设吗？</string>
+    <string name="do_you_want_to_remove_this_container">要删除此容器吗？</string>
+    <string name="do_you_want_to_duplicate_this_container">要复制此容器吗？</string>
+    <string name="do_you_want_to_remove_this_shortcut">要删除此快捷方式吗？</string>
+    <string name="do_you_want_to_remove_this_controller">要删除此控制器吗？</string>
+    <string name="do_you_want_to_remove_this_wine_version">要删除此 Wine 版本吗？</string>
+    <string name="do_you_want_to_remove_this_preset">要删除此预设吗？</string>
+    <string name="do_you_want_to_end_this_process">要结束此进程吗？</string>
+    <string name="controls_editor">控制编辑器</string>
+    <string name="enabled">已启用</string>
+    <string name="disabled">已禁用</string>
+    <string name="container">容器</string>
+    <string name="screen_size">分辨率</string>
+    <string name="new_environment_variable">新建环境变量</string>
+    <string name="environment_variables">环境变量</string>
+    <string name="value">值</string>
+    <string name="processor_affinity">处理器亲和性</string>
+    <string name="processor_affinity_32_bit_apps">处理器亲和性（32 位应用）</string>
+    <string name="cursor_speed">光标速度</string>
+    <string name="pause">暂停</string>
+    <string name="resume">继续</string>
+    <string name="display_and_session">显示 &amp; 会话</string>
+    <string name="mouse_settings">鼠标设置</string>
+    <string name="relative_mouse_movement">相对鼠标移动</string>
+    <string name="toggle_switch">切换开关</string>
+    <string name="profile_exported_to">配置已导出到</string>
+    <string name="unable_to_import_profile">无法导入配置</string>
+    <string name="wine_configuration">Wine 配置</string>
+    <string name="registry_keys">注册表项</string>
+    <string name="csmt">CSMT（命令流多线程）</string>
+    <string name="gpu_name">GPU 名称</string>
+    <string name="offscreen_rendering_mode">离屏渲染模式</string>
+    <string name="strict_shader_math">严格着色器运算</string>
+    <string name="video_memory_size">显存大小</string>
+    <string name="show_fps">显示 FPS</string>
+    <string name="none">无</string>
+    <string name="custom_text">自定义文本</string>
+    <string name="icon">图标</string>
+    <string name="import_profile">导入配置</string>
+    <string name="export_profile">导出配置</string>
+    <string name="touchpad_help">触摸板帮助</string>
+    <string name="touchpad_help_mouse_left_click_title">鼠标左键单击</string>
+    <string name="touchpad_help_mouse_left_click_description">单指轻点</string>
+    <string name="touchpad_help_mouse_right_click_title">鼠标右键单击</string>
+    <string name="touchpad_help_mouse_right_click_description">单指按住，另一手指轻点</string>
+    <string name="touchpad_help_mouse_scroll_wheel_title">鼠标滚轮</string>
+    <string name="touchpad_help_mouse_scroll_wheel_description">双指轻点并移动</string>
+    <string name="touchpad_help_main_menu_title">主菜单</string>
+    <string name="touchpad_help_main_menu_description">四指轻点</string>
+    <string name="duplicate">复制</string>
+    <string name="about">关于</string>
+    <string name="graphics_enhancements">图形增强</string>
+    <string name="motion_blur">动态模糊</string>
+    <string name="credits_and_third_party_apps">鸣谢与第三方应用</string>
+    <string name="external_controllers">外接控制器</string>
+    <string name="graphics_driver">显卡驱动</string>
+    <string name="audio_driver">音频驱动</string>
+    <string name="loading">加载中…</string>
+    <string name="press_any_button_on_your_controller">请按下控制器上的任意按键</string>
+    <string name="bindings">绑定</string>
+    <string name="show_touchscreen_controls">显示触屏控制</string>
+    <string name="dxwrapper">DX 封装</string>
+    <string name="mouse_warp_override">鼠标跳转覆盖</string>
+    <string name="direct3d">Direct3D</string>
+    <string name="directinput">DirectInput</string>
+    <string name="directsound">DirectSound</string>
+    <string name="directmusic">DirectMusic</string>
+    <string name="directplay">DirectPlay</string>
+    <string name="directshow">DirectShow</string>
+    <string name="directx">DirectX</string>
+    <string name="xaudio">XAudio</string>
+    <string name="vcrun2010">Visual C++ 2010</string>
+    <string name="opengl">OpenGL</string>
+    <string name="settings">设置</string>
+    <string name="file_manager">文件管理器</string>
+    <string name="rename">重命名</string>
+    <string name="open">打开</string>
+    <string name="exec_arguments">执行参数</string>
+    <string name="win_components">Win 组件</string>
+    <string name="drives">驱动器</string>
+    <string name="range">范围</string>
+    <string name="enable">启用</string>
+    <string name="disable">禁用</string>
+    <string name="force">强制</string>
+    <string name="installed_wine">已安装的 Wine</string>
+    <string name="install_wine">安装 Wine</string>
+    <string name="arch">架构</string>
+    <string name="version">版本</string>
+    <string name="dxvk_version">DXVK 版本</string>
+    <string name="vkd3d_version">VKD3D 版本</string>
+    <string name="unable_to_install_wine">无法安装 Wine</string>
+    <string name="unable_to_remove_this_wine_version">无法删除此 Wine 版本</string>
+    <string name="wine_version">Wine 版本</string>
+    <string name="removing_wine">正在删除 Wine…</string>
+    <string name="preparing_installation">正在准备安装…</string>
+    <string name="finishing_installation">正在完成安装…</string>
+    <string name="storage_info">存储信息</string>
+    <string name="drive_c">驱动器 C:</string>
+    <string name="cache">缓存</string>
+    <string name="total">总计</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="estimated_used_space">估计已用空间</string>
+    <string name="advanced">高级</string>
+    <string name="box64">Box64</string>
+    <string name="system">系统</string>
+    <string name="box64_preset">Box64 预设</string>
+    <string name="box64_version">Box64 版本</string>
+    <string name="letter">盘符</string>
+    <string name="target_path">目标路径</string>
+    <string name="xserver">XServer</string>
+    <string name="use_dri3_extension">使用 DRI3 扩展</string>
+    <string name="width">宽度</string>
+    <string name="height">高度</string>
+    <string name="old">旧</string>
+    <string name="_new">新</string>
+    <string name="task_manager">任务管理器</string>
+    <string name="process_name">进程名称</string>
+    <string name="pid">PID</string>
+    <string name="memory">内存</string>
+    <string name="end_process">结束进程</string>
+    <string name="new_task">新建任务</string>
+    <string name="processes">进程</string>
+    <string name="orientation">方向</string>
+    <string name="horizontal">横向</string>
+    <string name="vertical">纵向</string>
+    <string name="open_file">打开文件</string>
+    <string name="download_file">下载文件</string>
+    <string name="do_you_want_to_download_the_selected_profiles">要下载所选配置吗？</string>
+    <string name="downloading_file">正在下载文件...</string>
+    <string name="unable_to_load_profile_list">无法加载配置列表</string>
+    <string name="copy">复制</string>
+    <string name="cut">剪切</string>
+    <string name="paste">粘贴</string>
+    <string name="size">大小</string>
+    <string name="properties">属性</string>
+    <string name="sort">排序</string>
+    <string name="by_name">按名称</string>
+    <string name="by_date">按日期</string>
+    <string name="by_size">按大小</string>
+    <string name="overwrite">覆盖</string>
+    <string name="installed_version">已安装版本</string>
+    <string name="unable_to_download_file">无法下载文件</string>
+    <string name="stability">稳定性</string>
+    <string name="compatibility">兼容性</string>
+    <string name="intermediate">中等</string>
+    <string name="performance">性能</string>
+    <string name="performance_x87_off">性能（关闭 X86 降精度）</string>
+    <string name="performance_tso">性能（TSO）</string>
+    <string name="unreal_engine_3">Unreal Engine 3</string>
+    <string name="unity">Unity</string>
+    <string name="unity_mono_bleeding_edge">Unity Mono Bleeding Edge</string>
+    <string name="max_performance">最高性能</string>
+    <string name="denuvo">Denuvo</string>
+    <string name="num_items">%1$d 项</string>
+    <string name="preset">预设</string>
+    <string name="you_cannot_remove_this_preset">无法删除此预设</string>
+    <string name="dxwrapper_help_content"><![CDATA[
+        <i><b>WineD3D</b></i> 是将 DirectX 1-11 转换为 OpenGL 的转换层。<br /><br />
+        <i><b>DXVK</b></i> 是将 Direct3D 9-11 转换为 Vulkan 的转换层。<br /><br />
+        <i><b>VKD3D</b></i> 是将 Direct3D 12 API 转换为 Vulkan 的转换层。<br /><br />
+        <i><b>CNC DDraw</b></i> 是 DirectDraw 的实现，可提升经典游戏的兼容性。
+    ]]></string>
+    <string name="box64_env_var_help__dynarec_safeflags"><![CDATA[
+        CALL/RET 指令的标志位处理方式<br /><br />
+        <b>0</b>：将 CALL/RET 视为不需要标志位（更快，但不稳定）<br />
+        <b>1</b>：多数 RET 需要标志位，多数 CALL 不需要<br />
+        <b>2</b>：所有 CALL/RET 都需要标志位（较慢）
+    ]]></string>
+    <string name="box64_env_var_help__dynarec_fastnan">按 x86 的方式生成 -NAN</string>
+    <string name="box64_env_var_help__dynarec_fastround">生成精确的 x86 舍入</string>
+    <string name="box64_env_var_help__dynarec_x87double">x87 模拟使用 Float/Double</string>
+    <string name="box64_env_var_help__dynarec_bigblock"><![CDATA[
+        Dynarec 构建 BigBlock<br /><br />
+        <b>0</b>：不尝试构建尽可能大的块<br />
+        <b>1</b>：尽可能构建更大的 Dynarec 块<br />
+        <b>2</b>：构建更大的 Dynarec 块（块重叠时继续，仅限 elf 内存中的块）<br />
+        <b>3</b>：构建更大的 Dynarec 块（块重叠时继续，适用于所有类型的内存）
+    ]]></string>
+    <string name="box64_env_var_help__dynarec_strongmem"><![CDATA[
+        强内存模型模拟<br /><br />
+        <b>0</b>：不做特殊处理<br />
+        <b>1</b>：在写入内存时（某些 MOV 指令）启用部分内存屏障<br />
+        <b>2</b>：在 1 的基础上，每次通过 MOV 写内存都加内存屏障<br />
+        <b>3</b>：在 2 的基础上，读内存时以及某些 SSE/SSE2 指令也加内存屏障
+    ]]></string>
+    <string name="box64_env_var_help__dynarec_forward">构建块时允许的最大前向值</string>
+    <string name="box64_env_var_help__dynarec_callret">优化 CALL/RET 指令</string>
+    <string name="box64_env_var_help__dynarec_wait">设置 Dynarec 是否等待 FillBlock 就绪</string>
+    <string name="box64_env_var_help__dynarec_weakbarrier"><![CDATA[
+        调整内存屏障，以降低强内存模拟对性能的影响<br /><br />
+        <b>0</b>：使用常规安全屏障<br />
+        <b>1</b>：使用弱屏障，小幅提升性能<br />
+        <b>2</b>：使用弱屏障，并额外禁用最后的写屏障]]></string>
+    <string name="box64_env_var_help__dynarec_aligned_atomics"><![CDATA[
+        仅生成对齐的原子操作（目前仅支持 Arm64）。<br /><br />
+        <b>0</b>：生成处理非对齐原子操作的代码。<br />
+        <b>1</b>：仅生成对齐的原子操作，速度更快、代码更小，但对对齐数据地址执行带 LOCK 前缀的指令时会触发 SIGBUS。]]></string>
+    <string name="box64_env_var_help__dynarec_df"><![CDATA[
+        启用或禁用延迟标志位。<br /><br />
+        <b>0</b>：禁用延迟标志位。<br />
+        <b>1</b>：启用延迟标志位。]]></string>
+    <string name="box64_env_var_help__dynarec_dirty"><![CDATA[
+        允许继续运行未受保护且可能已脏的块。<br /><br />
+        <b>0</b>：不允许继续运行未受保护且可能已脏的块。<br />
+        <b>1</b>：允许继续运行向代码所在页写入数据的动态块。某些游戏的加载速度会变快，但也可能出现意外崩溃。<br />
+        <b>2</b>：还会在检测到 HotPage 时将该页标记为 NEVERCLEAN，因此不再对其写保护，但该页构建的块始终会被检测。这样可能更快（但某些 SMC 情况可能无法捕获）。]]></string>
+    <string name="show_adrenotools_unsupported">在不支持的设备上启用/显示 Adreno Tools</string>
+    <string name="box64_env_var_help__dynarec_nativeflags"><![CDATA[
+        启用或禁用原生标志位。<br /><br />
+        <b>0</b>：不使用原生标志位。<br />
+        <b>1</b>：尽可能使用原生标志位。]]></string>
+    <string name="box64_env_var_help__dynarec_pause"><![CDATA[
+        启用 x86 PAUSE 模拟，可能有助于提升自旋锁性能。<br /><br />
+        <b>0</b>：忽略 x86 PAUSE 指令。<br />
+        <b>1</b>：使用 YIELD 模拟 x86 PAUSE 指令。<br />
+        <b>2</b>：使用 WFI 模拟 x86 PAUSE 指令。<br />
+        <b>3</b>：使用 SEVL+WFE 模拟 x86 PAUSE 指令。
+    ]]></string>
+    <string name="box64_env_var_help__bleeding_edge">启用实验性且可能不稳定的 Dynarec 优化。</string>
+    <string name="box64_env_var_help__jvm">针对 Java 虚拟机（JVM）负载优化 Dynarec。</string>
+    <string name="box64_env_var_help__tcc">启用 TinyCC（TCC）集成，用于即时编译某些辅助函数。</string>
+    <string name="box64_env_var_help__hotpage">设置 Dynarec 中 HotPage 检测的阈值。</string>
+    <string name="box64_env_var_help__fastfcode">对浮点运算使用更快但兼容性较低的代码生成。</string>
+    <string name="box64_env_var_help__avx"><![CDATA[
+        实现 AVX 和 AVX2，以及 BMI1、BMI2、ADX、FMA、F16C 和 RDANDR 扩展！<br /><br />
+        <b>0</b>：禁用 AVX 扩展<br />
+        <b>1</b>：启用 AVX、BMI1、F16C 和 VAES 扩展。<br />
+        <b>2</b>：在 1 的基础上启用 AVX2、BMI2、FMA、ADX、VPCLMULQDQ 和 RDRAND。<br />\
+    ]]></string>
+    <string name="box64_env_var_help__sse42">启用或禁用 SSE4.2 指令集模拟。</string>
+    <string name="box64_env_var_help__sha">启用或禁用 SHA 指令集扩展。</string>
+    <string name="box64_env_var_help__futex_waitv">使用 futex_waitv 系统调用以获得更好的同步性能（需要内核 5.16+）。</string>
+    <string name="box64_env_var_help__dynarec_gdb">启用 GDB 调试桩，用于调试 Dynarec 生成的代码。</string>
+    <string name="box64_env_var_help__dynarec_strongmem_page"><![CDATA[
+        按页启用强内存模拟<br /><br />
+        <b>0</b>：禁用<br />
+        <b>1</b>：对代码页启用<br />
+        <b>2</b>：对所有页启用
+    ]]></string>
+    <string name="box64_env_var_help__maxcpu">Box64 向程序呈现的最大 CPU 数量</string>
+    <string name="box64_env_var_help__unityplayer">检测 UnityPlayer.dll 并应用 strongmem 设置</string>
+    <string name="box64_env_var_help__mmap32">强制所有内存分配位于 32 位地址空间</string>
+    <string name="fexcore_env_var_help__tsoenabled">启用 TSO IR 操作（多线程应用必需）。</string>
+    <string name="fexcore_env_var_help__core">选择 FEXCore 执行模式。0 为 JIT（快），1 为解释器（慢，兼容性更好）。</string>
+    <string name="fexcore_env_var_help__paranoidtso">启用更严格的 TSO 检查。仅在标准 TSO 不足时使用。</string>
+    <string name="fexcore_env_var_help__smc_symbolic">启用符号化 SMC 检查，在某些特定场景下更快。</string>
+    <string name="fexcore_env_var_help__abi_rewrite">启用 x86 ABI 重写，以更好地匹配宿主 ARM ABI。</string>
+    <string name="fexcore_env_var_help__gdb_port">设置用于远程调试的 GDB 端口。设为 0 可禁用。</string>
+    <string name="fexcore_env_var_help__cpu_cores">覆盖向应用报告的 CPU 核心数。</string>
+    <string name="fexcore_env_var_help__linux_kernel_version">伪造向客户机报告的 Linux 内核版本（例如 5.15.0）。</string>
+    <string name="fexcore_env_var_help__posix_shm">启用 POSIX 共享内存代替 SystemV。</string>
+    <string name="fexcore_env_var_help__mappable_w_x">允许内存同时可写和可执行（W+X）。</string>
+    <string name="fexcore_env_var_help__smc_force_all">对所有内存页强制进行自修改代码检查。</string>
+    <string name="fexcore_env_var_help__vectortsoenabled">启用 TSO 时使向量加载/存储具有原子性。</string>
+    <string name="fexcore_env_var_help__halfbarriertsoenabled">在 TSO 下对非对齐加载/存储使用半屏障原子操作。</string>
+    <string name="fexcore_env_var_help__memcpysettsoenabled">在 TSO 下使 REP MOVS / REP STOS 具有原子性。</string>
+    <string name="fexcore_env_var_help__multiblock">启用多块代码编译。可能导致 JIT 编译时间变长并出现卡顿。</string>
+    <string name="fexcore_env_var_help__hostfeatures">控制 CPU 特性强制方式。</string>
+    <string name="fexcore_env_var_help__smalltscscale">在低频系统上缩放 TSC。</string>
+    <string name="fexcore_env_var_help__smc_checks">自修改代码检查。</string>
+    <string name="fexcore_env_var_help__volatilemetadata">可用时使用 PE 文件中的易失元数据进行 TSO 处理。</string>
+    <string name="fexcore_env_var_help__monohacks">用于 Mono 检测的特殊 SMC + JIT 块 hack。</string>
+    <string name="fexcore_env_var_help__hidehypervisorbit">隐藏 CPUID 的虚拟机监控位（对因此崩溃的应用有用）。</string>
+    <string name="fexcore_env_var_help__disablel2cache">禁用 FEXCore JIT L2 缓存查询，可节省内存但会引入卡顿。</string>
+    <string name="fexcore_env_var_help__dynamicl1cache">将 FEXCore JIT L1 缓存改为动态大小，可节省内存但会引入卡顿。</string>
+    <string name="fexcore_env_var_help__x87reducedprecision">使用 64 位精度模拟 X87 浮点。这会降低模拟精度，可能导致渲染错误。</string>
+    <string name="columns">列</string>
+    <string name="directinput_mapper_type">DirectInput 映射类型</string>
+    <string name="desktop">桌面</string>
+    <string name="theme">主题</string>
+    <string name="background">背景</string>
+    <string name="max_device_memory">最大设备内存</string>
+    <string name="frame_rate">帧率</string>
+    <string name="configuration">配置</string>
+    <string name="browse">浏览</string>
+    <string name="magnifier">放大镜</string>
+    <string name="bring_to_front">置于顶层</string>
+    <string name="options">选项</string>
+    <string name="enable_experimental_wow64_mode">启用实验性 WoW64 模式</string>
+    <string name="logs">日志</string>
+    <string name="enable_wine_debug">启用 Wine 调试</string>
+    <string name="enable_box64_logs">启用 Box64 日志</string>
+    <string name="export">导出</string>
+    <string name="logs_exported_to">日志已导出到</string>
+    <string name="general">通用</string>
+    <string name="msg_warning_install_wine">警告：安装新版本 Wine 仅建议用于测试。</string>
+    <string name="startup_selection">启动选项</string>
+    <string name="wine_debug_channel">Wine 调试通道</string>
+    <string name="game_controller">统一控制系统</string>
+    <string name="vibration">振动</string>
+    <string name="vibration_slot">插槽 %1$d</string>
+    <string name="test_vibration">测试振动</string>
+    <string name="controller_vibration_test">控制器振动测试</string>
+    <string name="left_motor_heavy">左侧强马达（隆隆）</string>
+    <string name="right_motor_light">右侧弱马达（嗡嗡）</string>
+    <string name="both_motors">双马达（全强度）</string>
+    <string name="pulse_pattern">脉冲模式测试</string>
+    <string name="start_vibration_test">开始振动测试</string>
+    <string name="stop_vibration">停止振动</string>
+    <string name="grant_usb_permission">授予 USB 权限</string>
+
+    <string name="experimental">实验性</string>
+    <string name="glibc_exp_edition">基于</string>
+    <string name="enabled_async">启用异步</string>
+    <string name="enabled_async_cache">启用异步缓存</string>
+    <string name="dxvk_config">DXVK 配置</string>
+    <string name="dxvk_config_defaults_info">默认值：enableAsync=True，numCompilerThreads=2，memoryTrack=False，presentThrottle=0，debugLayer=False，nvapiHack=True，useRawSsbo=True，maxFrameLatency=1</string>
+    <string name="vkd3d_feature_level">VKD3D 功能级别</string>
+    <string name="filter">筛选</string>
+    <string name="all">全部</string>
+    <string name="group">分组</string>
+    <string name="new_group">新建分组</string>
+    <string name="import_group">导入分组</string>
+    <string name="new_file">新建文件</string>
+    <string name="new_folder">新建文件夹</string>
+    <string name="new_item">新建项目</string>
+    <string name="group_edit">编辑分组</string>
+    <string name="group_name">分组名称</string>
+    <string name="do_you_want_to_duplicate_this_group">要复制此分组吗？</string>
+    <string name="do_you_want_to_remove_this_group">要删除此分组吗？</string>
+    <string name="do_you_want_to_duplicate_this_process">要复制此进程吗？</string>
+    <string name="do_you_want_to_remove_this_process">要删除此进程吗？</string>
+    <string name="do_you_want_to_remove_this_variable">要删除此变量吗？</string>
+    <string name="variable_name">变量名称</string>
+    <string name="variable_already_exists">变量已存在</string>
+    <string name="cannot_remove_default_profile">无法删除默认配置。</string>
+    <string name="cannot_edit_default_profile">无法编辑默认配置。</string>
+    <string name="do_you_want_to_restore_default_profile">要恢复默认配置吗？</string>
+    <string name="simulate_touch_screen">模拟触屏</string>
+    <string name="install_content">安装内容</string>
+    <string name="content_type">内容类型</string>
+    <string name="contents">内容</string>
+    <string name="do_you_want_to_install_content">要安装附加内容吗？</string>
+    <string name="pls_make_sure_content_trustworthy">内容包含可执行文件。不安全的可执行文件可能危及您的数据或设备安全。安装前请务必确认所安装的附加内容来源可靠。</string>
+    <string name="content_suffix_is_wcp_packed_xz_zst">内容文件使用 .wcp 扩展名，并以 xz 或 zst 格式压缩。</string>
+    <string name="installing_content">正在安装内容…</string>
+    <string name="unable_to_install_content">无法安装内容。</string>
+    <string name="install_failed">安装失败</string>
+    <string name="file_cannot_be_recognied">无法识别该文件。</string>
+    <string name="profile_not_found_in_content">内容中未找到配置。</string>
+    <string name="profile_cannot_be_recognized">无法识别配置</string>
+    <string name="content_already_exist">要安装的内容已存在。</string>
+    <string name="content_info">内容信息</string>
+    <string name="version_code">版本号</string>
+    <string name="description">描述</string>
+    <string name="file_list">文件列表</string>
+    <string name="_continue">继续</string>
+    <string name="content_installed_success">内容安装成功！</string>
+    <string name="content_cannot_be_trusted">内容不可信。</string>
+    <string name="content_is_incomplete">内容不完整。</string>
+    <string name="warning_content_has_untrusted_files">警告：附加内容包含不可信文件。通常情况下以下文件不应被修改。请自行决定是否继续安装。</string>
+    <string name="warning">警告</string>
+    <string name="do_you_want_to_remove_this_content">要删除此内容吗？</string>
+    <string name="add_to_home_screen">添加到主屏幕</string>
+    <string name="shortcut_not_available">此快捷方式已不可用。请删除或重新创建。</string>
+    <string name="enable_file_provider">启用文件提供程序</string>
+    <string name="take_effect_next_startup">此选项将在下次启动时生效。</string>
+    <string name="imagefs">Imagefs</string>
+    <string name="reinstall_imagefs">重新安装 Imagefs</string>
+    <string name="do_you_want_to_reinstall_imagefs">要重新安装 imagefs 吗？此操作将恢复系统文件，您的容器不会改变。</string>
+    <string name="unable_to_remove_content_since_container_using">无法删除此内容，因为已有容器正在使用该 Wine。</string>
+    <string name="get_more_contents_form_github">可访问 https://github.com/longjunyu2/winlator/releases 获取更多内容。</string>
+    <string name="setup_failed">设置失败</string>
+    <string name="graphics_driver_configuration">显卡驱动配置</string>
+    <string name="select_graphics_driver_version">选择显卡驱动版本：</string>
+    <string name="graphics_driver_version">显卡驱动版本</string>
+    <string name="graphics_driver_available_extensions">可用扩展</string>
+    <string name="add_to_homescreen">添加到主屏幕</string>
+    <string name="add_save">添加存档</string>
+    <string name="saves">存档</string>
+    <string name="import_save">导入存档</string>
+    <string name="transfer">传输</string>
+    <string name="share">分享</string>
+    <string name="unregister">取消注册</string>
+    <string name="no_saves_to_display">没有可显示的存档</string>
+    <string name="new_save">注册存档</string>
+    <string name="save_path">存档路径</string>
+    <string name="save_title">存档名称</string>
+    <string name="save_container">所选容器</string>
+    <string name="select_save_path">定位存档文件夹</string>
+    <string name="select_container_first">请先选择包含存档的容器。</string>
+    <string name="fill_all_fields">路径和存档名称为必填项</string>
+    <string name="invalid_path">不是有效的存档目录路径</string>
+    <string name="confirm_selection">确认选择</string>
+    <string name="select_directory">选择存档目录</string>
+    <string name="invalid_container">路径无效</string>
+    <string name="up_directory">上级目录</string>
+    <string name="edit_save_title">更新存档标题</string>
+    <string name="edit_save">编辑存档</string>
+    <string name="original_save_path">已注册的存档路径</string>
+    <string name="updated_save_path">更新后的存档路径</string>
+    <string name="confirmation">确认</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="path_not_changed_prompt">路径未改变。要继续吗？</string>
+    <string name="save_transfer">传输存档</string>
+    <string name="select_container">目标容器：</string>
+    <string name="transfer_complete">传输完成</string>
+    <string name="transfer_failed">传输失败</string>
+    <string name="unable_to_transfer_save">无法传输存档</string>
+    <string name="spinner_container_selection">正在传输...</string>
+    <string name="name_required">名称为必填项</string>
+    <string name="exporting_save">正在导出存档...</string>
+    <string name="importing_save">正在导入存档...</string>
+    <string name="_copy">复制</string>
+    <string name="copying_file">正在复制文件…</string>
+    <string name="moving_file">正在移动文件…</string>
+    <string name="deleting_file">正在删除文件…</string>
+    <string name="backing_up_data">正在备份数据...</string>
+    <string name="restoring_data">正在恢复数据...</string>
+    <string name="midi_sound_font">MIDI 音色库</string>
+    <string name="sound">声音</string>
+    <string name="do_you_want_to_remove_this_sound_font">要删除此音色库吗？</string>
+    <string name="sound_font_removed_success">音色库删除成功！</string>
+    <string name="sound_font_removed_failed">音色库删除失败！</string>
+    <string name="sound_font_installed_success">音色库安装成功！</string>
+    <string name="sound_font_installed_failed">音色库安装失败！</string>
+    <string name="sound_font_already_exist">要安装的音色库已存在。</string>
+    <string name="unable_to_install_soundfont">无法安装音色库</string>
+    <string name="installing_soundfont">正在安装音色库…</string>
+    <string name="sound_font_bad_format">音色库格式错误。</string>
+    <string name="cannot_remove_default_sound_font">无法删除默认音色库</string>
+    <string name="enable_dinput_for_wine_game">为 Wine 游戏启用 DInput</string>
+    <string name="enable_xinput_for_wine_game">为 Wine 游戏启用 XInput</string>
+
+    <string name="help_xinput"><![CDATA[
+        如果您的游戏使用 <i><b>XInput API</b></i> 支持游戏控制器，请启用此选项。<br/><br/>
+        此选项会同时影响<i><b>虚拟</b></i>（由输入控制提供）和<i><b>物理</b></i>游戏控制器。
+    ]]></string>
+    <string name="help_dinput"><![CDATA[
+        如果您的游戏使用 <i><b>DInput API</b></i> 支持游戏控制器，请启用此选项。<br/><br/>
+        此选项会同时影响<i><b>虚拟</b></i>（由输入控制提供）和<i><b>物理</b></i>游戏控制器。
+    ]]></string>
+    <string name="help_exclusive_xinput">某些使用 DInput 的游戏（如《雷曼：起源》和《极品飞车：最高通缉 2005》）需要禁用此选项。</string>
+    <string name="enable_xinput_and_dinput_same_time">部分游戏同时支持两种 API。在此类游戏中同时启用 XInput 和 DInput 可能导致控制异常，例如《以撒的结合》和《生化危机》系列。</string>
+    <string name="warning_gamepad_mouse_mix">警告：在同一控制器上混合手柄和鼠标绑定可能导致游戏出现异常行为。建议只使用手柄绑定，或只使用鼠标/键盘绑定。</string>
+    <string name="startup_normal">常规（加载所有服务）</string>
+    <string name="startup_essential">精简（仅加载必要服务）</string>
+    <string name="startup_aggressive">激进（启动时停止服务）</string>
+    <string name="lc_all" translatable="false">LC_ALL</string>
+
+    <string name="toggle_orientation">切换方向</string>
+    <string name="help_file_provider"><![CDATA[
+        <i><b>文件提供程序</b></i>允许通过 Android 文件管理器访问 Winlator 的内部数据。<br/><br/>
+    ]]></string>
+    <string name="reconfigure">重新配置</string>
+    <string name="do_you_want_to_reconfigure_wine">要在下次启动时重新配置此容器吗？这将移除时间戳以触发 Wine 配置。</string>
+
+    <string name="secondary_executable">路径：</string>
+    <string name="enter_secondary_exec_path"> 例如："D:/Games/My Game/My Game.exe"</string>
+    <string name="exec_delay">延迟执行（秒）：</string>
+    <string name="enter_delay_seconds">输入延迟秒数：</string>
+    <string name="use_secondary_executable">使用次要可执行文件？</string>
+    <string name="secondary_exec">次要可执行文件</string>
+    <string name="secondary_exe_path_subtext">（路径中的空格需用引号包裹）</string>
+    <string name="pip_mode">画中画模式</string>
+    <string name="configure">配置</string>
+    <string name="enable_sendinput_mode">使用 Windows SendInput 模式</string>
+    <string name="enable_touchscreen_timeout">触屏超时（需要重启）</string>
+    <string name="enable_touchscreen_haptics">启用触屏触感反馈</string>
+    <string name="help_steamgrid">SteamGrid API 密钥</string>
+    <string name="disable_xinput_for_shortcut">禁用 Xinput（用于独占键鼠控制）</string>
+    <string name="num_controllers">控制器数量</string>
+    <string name="fullscreen_stretched">启用全屏（拉伸）</string>
+    <string name="fullscreen_mode">全屏模式</string>
+    <string name="move_cursor_to_touchpoint">模拟触屏</string>
+    <string name="screen_alignment">屏幕对齐</string>
+    <string name="export_container">导出容器</string>
+    <string name="exporting_container">正在导出容器...</string>
+
+    <string name="brightness">亮度</string>
+    <string name="contrast">对比度</string>
+    <string name="gamma">伽马</string>
+    <string name="color_adjustment">颜色调整</string>
+    <string name="enable_fxaa">启用 FXAA</string>
+    <string name="enable_crt_shader">启用 CRT 着色器</string>
+
+    <string name="do_you_want_to_add_a_new_profile">要添加新配置吗？</string>
+
+    <string name="default_profile">默认配置</string>
+
+    <string name="reset">重置</string>
+
+    <string name="enable_toon_shader">启用卡通着色器</string>
+    <string name="enable_ntsc_effect">启用 NTSC 效果</string>
+    <string name="enter_profile_name">输入配置名称</string>
+
+    <!-- In res/values/strings.xml -->
+    <!-- pending usage -->
+    <string name="configure_analog_sticks">配置摇杆</string>
+    <string name="analog_stick_settings">摇杆设置</string>
+    <string name="left_analog_stick_settings">左摇杆设置</string>
+    <string name="right_analog_stick_settings">右摇杆设置</string>
+    <string name="deadzone">死区：%1$d%%</string>
+    <string name="sensitivity">灵敏度：%1$d%%</string>
+    <string name="invert_x_axis_left">反转 X 轴（左摇杆）</string>
+    <string name="invert_y_axis_left">反转 Y 轴（左摇杆）</string>
+    <string name="invert_x_axis_right">反转 X 轴（右摇杆）</string>
+    <string name="invert_y_axis_right">反转 Y 轴（右摇杆）</string>
+    <string name="save">保存</string>
+
+
+
+    <string name="not_connected">未连接</string>
+    <string name="preferences_button_text">   偏好设置   </string>
+    <string name="help_button_text">   帮助   </string>
+    <string name="exit_button_text">   退出   </string>
+    <string name="extra_keys_config_desc">此处可设置额外按键变量的值，用法与 Termux 应用相同（参见<a href="http://wiki.termux.com/wiki/Touch_Keyboard#Extra_Keys_Row">此文档</a>）等 \n
+例如 <b>META</b> 表示 <i>META 键</i>，\n
+<b>KEYBOARD</b> 表示 <i>软键盘开关按键</i>，\n
+<b>PREFERENCES</b> 表示 <i>打开偏好设置的按键</i>，\n
+<b>MOUSE_HELPER</b> 表示 <i>鼠标助手开关按键</i>，\n
+<b>STYLUS_HELPER</b> 表示 <i>触控笔单击覆盖层开关按键</i>，\n
+<b>EXIT</b> 表示 <i>退出应用的按键</i>。</string>
+    <string name="notification_content_text">下拉以显示选项</string>
+    <string name="notification_open_preferences">偏好设置</string>
+    <string name="notification_exit">退出</string>
+    <string name="notification_restart_activity">重启</string>
+    <string name="notification_toggle_soft_keyboard">切换输入法</string>
+    <string name="notification_toggle_additional_key_bar">切换附加键盘</string>
+    <string name="notification_release_pointer_and_keyboard_capture">释放捕获</string>
+    <string name="notification_toggle_fullscreen">切换全屏</string>
+
+    <string name="pref_main">偏好设置</string>
+    <string name="pref_output">输出</string>
+    <string name="pref_pointer">指针</string>
+    <string name="pref_kbd">键盘</string>
+    <string name="pref_other">其他</string>
+    <string name="pref_version">版本</string>
+    <string name="pref_ekbar">额外按键栏偏好设置</string>
+    <string name="pref_userActions">对用户操作的响应</string>
+
+    <string name="pref_displayResolutionMode">显示分辨率模式</string>
+    <string name="pref_displayScale">显示缩放，%</string>
+    <string name="pref_displayResolutionExact">显示分辨率</string>
+    <string name="pref_displayResolutionCustom">显示分辨率</string>
+    <string name="pref_adjustResolution">调整设定分辨率以适配屏幕方向</string>
+    <string name="pref_displayStretch">拉伸以填满屏幕</string>
+    <string name="pref_Reseed">软键盘打开时重新调整屏幕</string>
+    <string name="pref_Reseed_summary">软键盘打开时将调整屏幕尺寸。</string>
+    <string name="pref_PIP">画中画模式</string>
+    <string name="pref_PIP_summary">按下主页键或最近任务键时以画中画模式显示应用</string>
+    <string name="pref_fullscreen">全屏</string>
+    <string name="pref_fullscreen_summary">在设备显示中切换沉浸模式</string>
+    <string name="pref_forceOrientation">屏幕方向</string>
+    <string name="pref_hideCutout">隐藏屏幕凹口（如有）</string>
+    <string name="pref_keepScreenOn">保持屏幕常亮</string>
+
+    <string name="pref_touchMode">触屏输入模式</string>
+    <string name="pref_scaleTouchpad">对触摸板应用显示缩放系数</string>
+    <string name="pref_showStylusClickOverride">显示触控笔单击选项</string>
+    <string name="pref_showStylusClickOverride_summary">触控笔触摸覆盖：左键、中键或右键（仅限触控笔）</string>
+    <string name="pref_stylusIsMouse">启用触控笔鼠标模式</string>
+    <string name="pref_stylusIsMouse_summary">让触控笔像鼠标一样工作。启用后，触控笔只移动光标并发送鼠标单击，忽略压力、角度和倾斜。</string>
+    <string name="pref_stylusButtonContactModifierMode">触控笔按键接触修饰模式</string>
+    <string name="pref_stylusButtonContactModifierMode_summary">启用后，仅在按住触控笔按键且触控笔接触屏幕时发送右键或中键。</string>
+    <string name="pref_showMouseHelper">显示鼠标单击助手叠加层</string>
+    <string name="pref_showMouseHelper_summary">可与触摸板配合使用的屏幕鼠标按键</string>
+    <string name="pref_pointerCapture">尽可能捕获外接指针设备</string>
+    <string name="pref_pointerCapture_summary">拦截所有硬件指针事件。按下 Esc 键后指针返回 Android。</string>
+    <string name="pref_transformCapturedPointer">变换捕获的指针移动</string>
+    <string name="pref_capturedPointerSpeedFactor">捕获指针速度系数，%</string>
+    <string name="pref_tapToMove">为触摸板启用点按移动</string>
+
+    <string name="pref_showAdditionalKbd">显示附加键盘</string>
+    <string name="pref_showAdditionalKbd_summary">显示带额外按键的键盘。</string>
+    <string name="pref_showIMEWhileExternalConnected">外接键盘时显示输入法</string>
+    <string name="pref_showIMEWhileExternalConnected_summary">连接硬件键盘时显示软键盘。</string>
+    <string name="pref_preferScancodes">尽可能优先使用扫描码</string>
+    <string name="pref_preferScancodes_summary">让 X server 处理硬件键盘布局（使用 DE 设置或 setxkbmap）。</string>
+    <string name="pref_hardwareKbdScancodesWorkaround">硬件键盘扫描码兼容方案</string>
+    <string name="pref_hardwareKbdScancodesWorkaround_summary">修复某些设备上的扫描码问题。可能影响多布局使用。</string>
+    <string name="pref_dexMetaKeyCapture">拦截系统快捷键</string>
+    <string name="pref_dexMetaKeyCapture_summary">仅限三星 Dex。允许拦截 &quot;Alt+F4&quot;、&quot;Meta+D&quot;、&quot;Meta+E&quot; 等。</string>
+    <string name="pref_enableAccessibilityService">启用无障碍服务以手动拦截系统快捷键。</string>
+    <string name="pref_enableAccessibilityService_summary">打开无障碍设置。</string>
+    <string name="pref_enableAccessibilityServiceAutomatically">启用无障碍服务以自动拦截系统快捷键。</string>
+    <string name="pref_enableAccessibilityServiceAutomatically_summary">需要 WRITE_SECURE_SETTINGS 权限。</string>
+    <string name="pref_pauseKeyInterceptingWithEsc">用 Esc 键暂停按键拦截</string>
+    <string name="pref_filterOutWinkey">过滤拦截到的 Win（Meta/Mod4）键。</string>
+    <string name="pref_filterOutWinkey_summary">允许在拦截时使用 Dex 快捷键。需要无障碍服务才能工作。</string>
+    <string name="pref_enableGboardCJK">启用 CJK Gboard 的兼容方案</string>
+    <string name="pref_enableGboardCJK_summary">可能需要 Android 14 和 Gboard 14</string>
+
+    <string name="pref_clipboardEnable">剪贴板共享</string>
+    <string name="pref_requestNotificationPermission">请求通知权限</string>
+    <string name="pref_xrMode">Meta Oculus XR 模式</string>
+    <string name="pref_configureResponseToUserActions">配置对用户操作的响应</string>
+    <string name="pref_storeSecondaryDisplayPreferencesSeparately">单独存储副显示器的偏好设置</string>
+    <string name="pref_storeSecondaryDisplayPreferencesSeparately_summary">在要配置的显示器上打开此界面</string>
+
+    <string name="pref_adjustHeightForEK">为额外按键栏调整显示高度</string>
+    <string name="pref_adjustHeightForEK_summary">切换额外按键栏时可能导致屏幕闪烁。</string>
+    <string name="pref_useTermuxEKBarBehaviour">每次按键后停用附加按键栏上的特殊键</string>
+    <string name="pref_useTermuxEKBarBehaviour_summary">长按可锁定特殊键</string>
+    <string name="pref_opacityEKBar">额外按键栏不透明度，%</string>
+    <string name="pref_extra_keys_config">额外按键配置</string>
+
+    <string name="pref_swipeUpAction">三指上滑</string>
+    <string name="pref_swipeDownAction">三指下滑</string>
+    <string name="pref_volumeUpAction">音量加</string>
+    <string name="pref_volumeDownAction">音量减</string>
+    <string name="pref_backButtonAction">返回键</string>
+    <string name="pref_notificationTapAction">点击通知</string>
+    <string name="pref_notificationButton0Action">通知第一个按钮</string>
+    <string name="pref_notificationButton1Action">通知第二个按钮</string>
+    <string name="pref_mediaKeysAction">媒体键</string>
+
+    <string name="pref_summary_requiresExactOrCustom">需要将“显示分辨率模式”设为“exact”或“custom”</string>
+    <string name="pref_summary_requiresIntercepting">需要通过 Dex 模式或无障碍服务拦截系统快捷键</string>
+    <string name="pref_summary_requiresTrackpadAndNative">需要将“触屏输入模式”设为“Trackpad”，且“显示分辨率模式”不能为“native”</string>
+    <string name="fexcore_config">FEXCore</string>
+    <string name="fexcore_preset">FEXCore 预设</string>
+    <string name="adrenotools_gpu_drivers">Adrenotools GPU 驱动</string>
+    <string name="install_drivers">安装驱动</string>
+    <string name="install_drivers_message">接下来将提示您选择驱动。这些驱动必须与其他模拟器（如 Yuzu、Dolphin、Citra 等）使用的驱动相同。</string>
+    <string name="install_drivers_warning">请注意，由于当前 PC 模拟器的限制，高通驱动在 8 Gen2 以下的芯片组上可能未经修补无法工作。</string>
+    <string name="enable_vulkan_api_dump">启用将 Vulkan API 调用转储到文件。</string>
+    <string name="dll_emulator">32 位模拟器</string>
+    <string name="open_with_android_browser">在 Wine 中打开 Android 浏览器</string>
+    <string name="share_android_clipboard">与 Wine 共享 Android 剪贴板</string>
+    <string name="ddraw_wrapper">DDraw 封装</string>
+    <string name="fexcore_version">FEXCore 版本</string>
+    <string name="graphics_driver_max_device_memory">最大设备内存</string>
+    <string name="graphics_driver_sync_frame">每帧同步</string>
+    <string name="graphics_driver_disable_present_wait">禁用 KHR_present_wait</string>
+    <string name="graphics_driver_present_modes">呈现模式</string>
+    <string name="graphics_driver_resource_type">内存资源类型</string>
+    <string name="graphics_driver_vulkan_version">Vulkan 版本</string>
+    <string name="bcn_layer_configuration">BCn 层配置</string>
+    <string name="graphics_driver_bcn_enabled">启用 BCn 模拟</string>
+    <string name="graphics_driver_bcn_keep_raw">保留原始纹理数据（适用于需要回读纹理的游戏；约占 2 倍 BCn 纹理内存）</string>
+    <string name="graphics_driver_bcn_emulation">BCn 模拟</string>
+    <string name="graphics_driver_bcn_emulation_cache">BCn 模拟缓存</string>
+    <string name="ram_booster">RAM 加速（LMK 触发）</string>
+    <string name="enable_ram_booster">启用 RAM 加速</string>
+    <string name="enable_ram_booster_toast">显示 RAM 加速通知</string>
+    <string name="crisis_threshold">危机阈值（%）</string>
+    <string name="pre_crisis_level">危机前水平（%）</string>
+    <string name="crisis_intensity">危机加速强度（%）</string>
+    <string name="pre_crisis_intensity">危机前加速强度（%）</string>
+    <string name="booster_profile">加速配置</string>
+    <string name="shutdown">关机</string>
+    <string name="disable_mouse">切换鼠标</string>
+    <string name="enable_mouse">启用鼠标</string>
+    <string name="manage_cover_art">管理封面图</string>
+    <string name="manage_hero_art">管理加载画面图</string>
+    <string name="manage_graphics_drivers">管理显卡驱动</string>
+    <string name="manage_graphics_drivers_description">管理并更新内置显卡驱动组件。更新后的文件存储于内部存储，并优先于内置版本使用。</string>
+    <string name="reset_all">全部重置</string>
+    <string name="reset_driver_confirm">要将此驱动重置为默认内置版本吗？</string>
+    <string name="reset_all_drivers_confirm">要将所有驱动重置为内置版本吗？</string>
+    <string name="driver_updated_success">驱动更新成功！</string>
+    <string name="driver_reset_success">驱动已重置为默认。</string>
+    <string name="driver_update_failed">驱动更新失败。</string>
+    <string name="bundled">内置</string>
+    <string name="updated">已更新</string>
+    <string name="no_notes_available">暂无说明。</string>
+    <string name="driver_details">驱动详情</string>
+    <string name="update_driver_initial_confirm">要更新 %1$s 吗？\n\n请确保文件名称完全匹配，且为有效的 .tzst 压缩包。</string>
+    <string name="update_driver_confirm">确定要用所选文件替换 %1$s 吗？\n\n这将覆盖当前版本。</string>
+    <string name="driver_file_mismatch">所选文件（%1$s）必须与 %2$s 完全匹配</string>
+    <string name="unable_to_determine_filename">无法确定文件名。请重试。</string>
+    <string name="search_cover_art">搜索封面图</string>
+    <string name="change_cover_art">更换封面图</string>
+    <string name="reset_cover_art">重置封面图</string>
+    <string name="search_hero_art">搜索加载画面图</string>
+    <string name="change_hero_art">更换加载画面图</string>
+    <string name="reset_hero_art">重置加载画面图</string>
+    <string name="search">搜索</string>
+    <string name="refresh">刷新</string>
+
+    <!-- AI assistant: in-session chat panel -->
+    <string name="ai_assistant_title">AI 助手</string>
+    <string name="ai_new_chat">新建对话</string>
+    <string name="ai_settings">AI 设置</string>
+    <string name="ai_close">关闭</string>
+    <string name="ai_send">发送</string>
+    <string name="ai_input_hint">描述遇到的问题，例如游戏崩溃</string>
+    <string name="ai_quick_crash">游戏启动后立即崩溃，请找出原因</string>
+    <string name="ai_quick_black_screen">游戏显示黑屏</string>
+    <string name="ai_quick_missing_dll">提示缺少 DLL 或组件</string>
+    <string name="ai_quick_slow">帧率太低，如何优化</string>
+    <string name="ai_ready">就绪</string>
+    <string name="ai_thinking">思考中…</string>
+    <string name="ai_you">你</string>
+    <string name="ai_tool_ok">完成</string>
+    <string name="ai_tool_failed">失败</string>
+    <string name="ai_greeting">告诉我出了什么问题，我会检查容器配置、日志和正在运行的进程。</string>
+    <string name="ai_context_loaded">已附加诊断信息：设备、容器和日志尾部。</string>
+
+    <!-- AI assistant: settings -->
+    <string name="ai_settings_title">AI 助手设置</string>
+    <string name="ai_section_basics">连接</string>
+    <string name="ai_enable">启用 AI 悬浮窗</string>
+    <string name="ai_enable_desc">在容器上方显示悬浮球，点击即可与 AI 对话。</string>
+    <string name="ai_base_url">基础 URL</string>
+    <string name="ai_base_url_hint">https://api.openai.com/v1</string>
+    <string name="ai_base_url_help">任何兼容 OpenAI 的接口地址，通常以 /v1 结尾。支持 DeepSeek、Moonshot、Zhipu、SiliconFlow、OpenRouter 以及本地 Ollama。</string>
+    <string name="ai_api_key">API 密钥</string>
+    <string name="ai_api_key_hint">sk-...</string>
+    <string name="ai_api_key_warning">密钥以明文形式存储在本应用的私有存储中，绝不会上传到其他位置。请避免在共享设备上使用。</string>
+    <string name="ai_model">模型</string>
+    <string name="ai_model_hint">gpt-4o-mini</string>
+    <string name="ai_section_behaviour">行为</string>
+    <string name="ai_auto_diagnose">自动附加诊断信息</string>
+    <string name="ai_auto_diagnose_desc">每次新建对话都会附带设备信息、容器配置和日志尾部，无需手动复制。</string>
+    <string name="ai_allow_commands">允许只读命令</string>
+    <string name="ai_allow_commands_desc">允许 AI 在容器内运行 ls、cat、ldd、wine --version 等只读命令。任何写入操作都会被拒绝。</string>
+    <string name="ai_max_tool_rounds">最大诊断轮数</string>
+    <string name="ai_max_tool_rounds_desc">限制 AI 可连续发起的工具调用次数，避免无限循环。</string>
+    <string name="ai_test_connection">测试连接</string>
+    <string name="ai_testing">测试中…</string>
+    <string name="ai_test_ok">连接成功，模型已响应。</string>
+    <string name="ai_test_failed">连接失败：</string>
+    <string name="ai_not_configured">请先在设置中填写 API 密钥。</string>
+    <string name="ai_privacy_note">您的消息会发送到所配置的接口地址。日志可能包含文件路径和用户名，发送前请先检查。</string>
+    <string name="ai_export_bundle">导出诊断包</string>
+    <string name="ai_exporting">正在打包…</string>
+
+    <!-- Hardcoded UI labels moved into resources so they can be translated. -->
+    <string name="ui_acceleration_curve">加速曲线</string>
+    <string name="ui_accent_button">强调色按钮</string>
+    <string name="ui_activates_samsung_sperf_sdk_hardware">启用三星 SPerf SDK 硬件频率加速。</string>
+    <string name="ui_activation_method">激活方式</string>
+    <string name="ui_active_color_palette">当前调色板</string>
+    <string name="ui_add_folder">添加文件夹</string>
+    <string name="ui_adreno_0">Adreno 0</string>
+    <string name="ui_adreno_740">Adreno 740</string>
+    <string name="ui_advanced">高级</string>
+    <string name="ui_advanced_color_and_effects">高级（色彩与特效）</string>
+    <string name="ui_alerts_oem_game_boosters_hyperboost">通知厂商游戏加速服务（HyperBoost、Game Turbo、Samsung Game Booster、Pixel）。</string>
+    <string name="ui_appearance">外观</string>
+    <string name="ui_attempts_to_set_the_display">尝试将屏幕刷新率设为最高支持值（如 120Hz/144Hz），以降低输入延迟。</string>
+    <string name="ui_b_85">B: 85</string>
+    <string name="ui_background_tone">背景色调</string>
+    <string name="ui_backups_are_saved_to_downloads">备份保存在 Downloads/Winlator/Saves</string>
+    <string name="ui_bluetooth_other_controllers">蓝牙/其他手柄</string>
+    <string name="ui_boundary_height">边界高度</string>
+    <string name="ui_boundary_width">边界宽度</string>
+    <string name="ui_branch_and_architecture">分支与架构</string>
+    <string name="ui_brand_and_accent_color">品牌与强调色</string>
+    <string name="ui_browse">浏览</string>
+    <string name="ui_calibrate">校准</string>
+    <string name="ui_capture_external_pointer_mouse_lock">捕获外部指针（锁定鼠标）</string>
+    <string name="ui_catalog_filter">目录/筛选</string>
+    <string name="ui_catalog_json_url">目录 JSON 地址</string>
+    <string name="ui_catalog_settings">目录设置</string>
+    <string name="ui_color_preset">色彩预设</string>
+    <string name="ui_combo_trigger_button_2_optional">组合触发键 2（可选）</string>
+    <string name="ui_compact_mode">紧凑模式</string>
+    <string name="ui_config_title">配置标题</string>
+    <string name="ui_configure_bcn_texture_layer">配置 BCN 纹理层</string>
+    <string name="ui_connected_controllers">已连接手柄</string>
+    <string name="ui_contrast_8_5_1_pass">对比度: 8.5:1 (通过)</string>
+    <string name="ui_controllers">手柄</string>
+    <string name="ui_copying_files">正在复制文件…</string>
+    <string name="ui_crt_scanlines">CRT 扫描线</string>
+    <string name="ui_current_version">当前版本:</string>
+    <string name="ui_custom_palette_editor">自定义调色板编辑器</string>
+    <string name="ui_custom_vulkan_drivers_adrenotools_zip">您已安装的自定义 Vulkan 驱动（Adrenotools .zip）。在容器的显卡驱动设置中逐个选择。</string>
+    <string name="ui_deadzone_10" formatted="false">死区: 10%</string>
+    <string name="ui_deadzone_and_vibration">死区与振动</string>
+    <string name="ui_default_version">default_version</string>
+    <string name="ui_directinput">DirectInput</string>
+    <string name="ui_direct_texture_upload_faster">直接纹理上传（更快）</string>
+    <string name="ui_disables_dragging_and_orientation_toggling">禁用触摸拖动与方向切换</string>
+    <string name="ui_disable_xinput_exclusive_mouse_keyboard">禁用 XInput（独占鼠标/键盘模式）</string>
+    <string name="ui_download_catalog_source">下载目录源</string>
+    <string name="ui_downloading_0_mb_0_mb">正在下载: 0 MB / 0 MB</string>
+    <string name="ui_downloading_wine_runtime">正在下载 Wine 运行库…</string>
+    <string name="ui_download_size">下载大小</string>
+    <string name="ui_download_url">下载地址</string>
+    <string name="ui_drive_d">驱动器 D:</string>
+    <string name="ui_duration">时长</string>
+    <string name="ui_dynamically_detects_the_device_s">动态识别设备的 Prime/大核 CPU 集群，并通过 taskset 亲和性将模拟线程绑定到高性能核心。</string>
+    <string name="ui_edit_on_screen_controls">编辑屏幕按键</string>
+    <string name="ui_emulation">模拟</string>
+    <string name="ui_enable_frame_generation">启用帧生成</string>
+    <string name="ui_enable_pre_configured_dxvk_config">启用预设 DXVK 配置</string>
+    <string name="ui_enable_this_radial_wheel">启用此轮盘</string>
+    <string name="ui_engages_samsung_galaxy_sperf_sdk">在支持的三星设备上启用 Galaxy SPerf SDK 硬件频率加速。</string>
+    <string name="ui_execute">执行</string>
+    <string name="ui_fake_hdr_bloom_contrast">伪 HDR（泛光 + 对比度）</string>
+    <string name="ui_filename_ext">filename.ext</string>
+    <string name="ui_fill_button_icon_as_button">填充按钮（图标即按钮）</string>
+    <string name="ui_fit_game_window_to_screen">让游戏窗口适配屏幕</string>
+    <string name="ui_foldername">文件夹名</string>
+    <string name="ui_force_high_refresh_rate">强制高刷新率</string>
+    <string name="ui_fps">FPS:</string>
+    <string name="ui_fps_limiter">帧率限制</string>
+    <string name="ui_frame_generation_zerofg">帧生成 (ZeroFG)</string>
+    <string name="ui_fxaa_anti_aliasing">FXAA（抗锯齿）</string>
+    <string name="ui_g_0">G: 0</string>
+    <string name="ui_game_mode_signal_api_33">游戏模式信号 (API 33+)</string>
+    <string name="ui_game_name">游戏名称</string>
+    <string name="ui_general_and_display">常规与显示</string>
+    <string name="ui_get">获取</string>
+    <string name="ui_gpu">GPU:</string>
+    <string name="ui_graphics_and_rendering">图形与渲染</string>
+    <string name="ui_guest_thread_priority_boost">客户机线程优先级提升</string>
+    <string name="ui_gyro_deadzone_5" formatted="false">陀螺仪死区: 5%</string>
+    <string name="ui_gyro_smoothing_50" formatted="false">陀螺仪平滑: 50%</string>
+    <string name="ui_gyro_view">陀螺仪视角</string>
+    <string name="ui_hardware_info">硬件信息</string>
+    <string name="ui_hold_trigger_button_1">长按触发键 1</string>
+    <string name="ui_hud_look_and_style">HUD 外观与风格</string>
+    <string name="ui_informs_android_and_oem_game">告知 Android 及厂商游戏加速服务（HyperBoost、Game Turbo、Samsung Game Booster、Pixel 游戏面板）当前有游戏正在运行。</string>
+    <string name="ui_input_and_display">输入与显示</string>
+    <string name="ui_install_file">安装文件</string>
+    <string name="ui_invert_pitch_y">反转俯仰 (Y)</string>
+    <string name="ui_invert_x_axis_left_stick">反转 X 轴（左摇杆）</string>
+    <string name="ui_invert_x_axis_right_stick">反转 X 轴（右摇杆）</string>
+    <string name="ui_invert_yaw_x">反转偏航 (X)</string>
+    <string name="ui_invert_y_axis_left_stick">反转 Y 轴（左摇杆）</string>
+    <string name="ui_invert_y_axis_right_stick">反转 Y 轴（右摇杆）</string>
+    <string name="ui_launch_arguments_and_optimizations">启动参数与优化</string>
+    <string name="ui_layer_version">层版本</string>
+    <string name="ui_left_analog_stick_settings">左摇杆设置</string>
+    <string name="ui_left_stick">左摇杆</string>
+    <string name="ui_loading_games">正在加载游戏…</string>
+    <string name="ui_lock_hud_position">锁定 HUD 位置</string>
+    <string name="ui_log">日志</string>
+    <string name="ui_log_manager">日志管理器</string>
+    <string name="ui_looking_for_controllers">正在查找手柄…</string>
+    <string name="ui_mali_0">Mali 0</string>
+    <string name="ui_mode">模式</string>
+    <string name="ui_motor">马达</string>
+    <string name="ui_no_controller_connected_nplug_in">未连接手柄。\n请插入或配对手柄以设置按键。</string>
+    <string name="ui_no_drivers_installed_yet_ntap">尚未安装驱动。\n点击“安装驱动”添加 Adrenotools .zip。</string>
+    <string name="ui_non_root_performance_boosts">免 Root 性能提升</string>
+    <string name="ui_non_root_performance_enhancements">免 Root 性能增强</string>
+    <string name="ui_no_physical_controllers_detected_nconnect">未检测到实体手柄。\n请通过 USB 或蓝牙连接手柄。</string>
+    <string name="ui_notes">备注</string>
+    <string name="ui_notes_optional">备注（可选）</string>
+    <string name="ui_no_wine_or_proton_runtimes">此源中未找到 Wine 或 Proton 运行库。</string>
+    <string name="ui_ntsc_signal">NTSC 信号</string>
+    <string name="ui_number_of_times_played_0">已游玩次数: 0</string>
+    <string name="ui_official_bannerlator_proton_10_sdk">官方 Bannerlator Proton 10 (SDK 35)</string>
+    <string name="ui_open_source_licenses">开源许可</string>
+    <string name="ui_optimized_for_snap8gen3">针对骁龙 8 Gen3 优化</string>
+    <string name="ui_performance">性能</string>
+    <string name="ui_phone_to_check_the_test">手机（用于确认测试正在运行）</string>
+    <string name="ui_pins_emulation_and_game_threads">通过 taskset 将模拟与游戏线程绑定到 Prime/大核 CPU 集群。</string>
+    <string name="ui_playtime_0d_00h_00m_00s">游戏时长: 0d 00h 00m 00s</string>
+    <string name="ui_position_preset">位置预设</string>
+    <string name="ui_prefer_big_cpu_cores">优先使用大核</string>
+    <string name="ui_prevents_sudden_thermal_throttling_for">防止突发降频，保持帧率稳定。</string>
+    <string name="ui_promotes_box64_wine_cpu_worker">将 Box64/Wine CPU 工作线程从默认 nice 0 提升到显示紧急优先级 (-8/-4/-2)，且不降低渲染线程。</string>
+    <string name="ui_promotes_box64_wine_workers_to">将 Box64/Wine 工作线程提升到显示紧急优先级 (-8/-4/-2)。</string>
+    <string name="ui_properties">属性</string>
+    <string name="ui_proton_10_0_4_arm64ec">Proton 10.0-4 arm64ec</string>
+    <string name="ui_quality">质量</string>
+    <string name="ui_r_255">R: 255</string>
+    <string name="ui_radial_wheel">轮盘</string>
+    <string name="ui_radial_wheels">轮盘</string>
+    <string name="ui_ram">内存:</string>
+    <string name="ui_ready">就绪。</string>
+    <string name="ui_renderer">渲染器</string>
+    <string name="ui_renderer_2">渲染器:</string>
+    <string name="ui_requests_android_sustained_performance_mode">请求 Android 持续性能模式，防止突发降频并保持帧率稳定。</string>
+    <string name="ui_rescan">重新扫描</string>
+    <string name="ui_reset">重置</string>
+    <string name="ui_reset_statistics">重置统计</string>
+    <string name="ui_reset_to_defaults">恢复默认</string>
+    <string name="ui_restore_backup">恢复备份</string>
+    <string name="ui_right_analog_stick_settings">右摇杆设置</string>
+    <string name="ui_right_stick">右摇杆</string>
+    <string name="ui_sample_title_and_description">示例标题与描述</string>
+    <string name="ui_samsung_galaxy_game_turbo">Samsung Galaxy Game Turbo</string>
+    <string name="ui_samsung_sm_s918b">Samsung SM-S918B</string>
+    <string name="ui_save_as_container_default">保存为容器默认</string>
+    <string name="ui_save_folders">保存文件夹</string>
+    <string name="ui_save_for_this_game">仅为此游戏保存</string>
+    <string name="ui_scale">缩放</string>
+    <string name="ui_scales_the_container_resolution_to">将容器分辨率缩放到您的屏幕。SGSR 与 FSR 效果最锐利。</string>
+    <string name="ui_select_a_content_source_to">选择内容源以下载 Wine 或 Proton 运行库:</string>
+    <string name="ui_select_all">全选</string>
+    <string name="ui_sensitivity_100" formatted="false">灵敏度: 100%</string>
+    <string name="ui_sensitivity_x_yaw_1_0x">灵敏度 X（偏航）: 1.0x</string>
+    <string name="ui_sensitivity_y_pitch_1_0x">灵敏度 Y（俯仰）: 1.0x</string>
+    <string name="ui_set_steamgrid_api_key_cover">设置 SteamGrid API 密钥（封面图）</string>
+    <string name="ui_settings_drag_here_to_move">设置（拖动此处移动）</string>
+    <string name="ui_sharpening">锐化</string>
+    <string name="ui_sharpening_level">锐化强度</string>
+    <string name="ui_shortcut_export_path">快捷方式导出路径</string>
+    <string name="ui_show_1_0_1_lows" formatted="false">显示 1% / 0.1% 低帧</string>
+    <string name="ui_show_battery_percentage">显示电池百分比</string>
+    <string name="ui_show_battery_power">显示电池/电源</string>
+    <string name="ui_show_border">显示边框</string>
+    <string name="ui_show_cpu_load">显示 CPU 负载</string>
+    <string name="ui_show_cpu_temperature">显示 CPU 温度</string>
+    <string name="ui_show_fps">显示 FPS</string>
+    <string name="ui_show_frame_time_graph">显示帧时间曲线</string>
+    <string name="ui_show_gpu_load">显示 GPU 负载</string>
+    <string name="ui_show_hud">显示 HUD</string>
+    <string name="ui_show_ram_usage">显示内存占用</string>
+    <string name="ui_show_renderer">显示渲染器</string>
+    <string name="ui_show_wrapper_name">显示包装器名称</string>
+    <string name="ui_simulation_target">模拟目标</string>
+    <string name="ui_sort_order">排序方式</string>
+    <string name="ui_status">状态</string>
+    <string name="ui_steamgriddb_api_key">SteamGridDB API 密钥</string>
+    <string name="ui_steam_id_12345">Steam ID: 12345</string>
+    <string name="ui_stop">停止</string>
+    <string name="ui_storage_and_audio">存储与音频</string>
+    <string name="ui_storage_paths">存储路径</string>
+    <string name="ui_strength">强度</string>
+    <string name="ui_sustained_performance_mode">持续性能模式</string>
+    <string name="ui_system_and_audio">系统与音频</string>
+    <string name="ui_test_settings">测试设置</string>
+    <string name="ui_test_vibration">测试振动</string>
+    <string name="ui_theme_and_colors">主题与颜色</string>
+    <string name="ui_theme_preview">主题预览</string>
+    <string name="ui_thread_priority_boost">线程优先级提升</string>
+    <string name="ui_toon_outlines">卡通描边</string>
+    <string name="ui_touch_area_padding">触摸区域内边距</string>
+    <string name="ui_transcode_to">转码为</string>
+    <string name="ui_transparency">透明度</string>
+    <string name="ui_trigger_android_game_mode_signal">触发 Android 游戏模式信号 (API 33+)</string>
+    <string name="ui_upscaler">超分算法</string>
+    <string name="ui_upscaler_sharpness">超分锐度</string>
+    <string name="ui_upscales_a_game_running_smaller">用所选超分算法将小于容器分辨率的游戏画面（如 1280x720 中的 800x600）按原比例直接放大到屏幕。</string>
+    <string name="ui_usb_controller_direct">USB 手柄（直连）</string>
+    <string name="ui_use_square_deadzone_left_stick">使用方形死区（左摇杆）</string>
+    <string name="ui_use_this_folder">使用此文件夹</string>
+    <string name="ui_vertical_layout">垂直布局</string>
+    <string name="ui_vibrate_on">振动触发</string>
+    <string name="ui_vibration">振动</string>
+    <string name="ui_what_to_record_where_logs">记录什么、日志存放位置，以及每个游戏的日志</string>
+    <string name="ui_wheel_icon_scale">轮盘图标缩放</string>
+    <string name="ui_wheel_name">轮盘名称</string>
+    <string name="ui_wheel_slices_top_clockwise">轮盘扇区（从顶部顺时针）</string>
+    <string name="ui_winlator_mali">Winlator Mali</string>
+    <string name="ui_winlator_storage_path">Winlator 存储路径</string>
+    <string name="ui_x">x</string>
+    <string name="ui_add_details_about_drivers_etc">添加驱动等详细信息。</string>
+    <string name="ui_custom_fps_limit_e_g">自定义帧率上限（如 40、72、144）</string>
+    <string name="ui_e_g_weapons_spells_hotkeys">例如：武器、法术、快捷键</string>
+    <string name="ui_enter_command">输入命令</string>
+    <string name="ui_enter_custom_title">输入自定义标题</string>
+    <string name="ui_enter_your_api_key_here">在此输入 API 密钥</string>
+    <string name="ui_https_contents_json">https://.../contents.json</string>
+    <string name="ui_label">标签</string>
+    <string name="ui_value">值</string>
+    <string name="ui_variable_name">VARIABLE_NAME</string>
+
+    <!-- Java UI strings extracted for translation. -->
+    <string name="ui_runtime_active_hint">imagefs/opt 或 contents 目录中的活动运行库</string>
+    <string name="ui_all_files_access_required">需要所有文件访问权限</string>
+    <string name="ui_remove_runtime_confirm">确定要从 Winlator Mali 移除此运行库吗？</string>
+    <string name="ui_builtin_icons">内置图标</string>
+    <string name="ui_close">关闭</string>
+    <string name="ui_community_configs">社区配置</string>
+    <string name="ui_community_upload">社区上传</string>
+    <string name="ui_configuration_details">配置详情</string>
+    <string name="ui_confirm_game_info">确认游戏信息</string>
+    <string name="ui_connecting_pattern_archive">正在连接图案库…</string>
+    <string name="ui_connecting_repository">正在连接仓库…</string>
+    <string name="ui_container_profile_saves">容器配置存档</string>
+    <string name="ui_custom_catalog_source_url">自定义目录源地址</string>
+    <string name="ui_custom_catalog_url">自定义目录地址</string>
+    <string name="ui_customize_theme">自定义主题</string>
+    <string name="ui_download_upper">下载</string>
+    <string name="ui_drive_z">驱动器 Z:</string>
+    <string name="ui_enter_catalog_url">输入有效 contents.json 目录的直接地址：</string>
+    <string name="ui_enter_repo_url">输入 contents.json 仓库地址：</string>
+    <string name="ui_error">错误</string>
+    <string name="ui_export_backup">导出备份</string>
+    <string name="ui_extracting_runtime">正在解压并注册运行库包…</string>
+    <string name="ui_failed_games_list">获取游戏列表失败。\n请检查网络连接或服务器状态。</string>
+    <string name="ui_file_conflict">文件冲突</string>
+    <string name="ui_find">查找</string>
+    <string name="ui_folder_gone">文件夹已不存在</string>
+    <string name="ui_frame_generation">帧生成</string>
+    <string name="ui_global_controls_opacity">全局按键透明度</string>
+    <string name="ui_hud_settings">HUD 设置</string>
+    <string name="ui_import_upper">导入</string>
+    <string name="ui_import_configuration">导入配置</string>
+    <string name="ui_all_files_access_rationale">要访问 U 盘等额外存储设备，必须授予“所有文件访问权限”。点击“确定”前往 Android 设置中授权。</string>
+    <string name="ui_installed">已安装</string>
+    <string name="ui_installing">正在安装…</string>
+    <string name="ui_internal_storage">内部存储</string>
+    <string name="ui_invalid_save_archive">❌ 无效的存档压缩包</string>
+    <string name="ui_log_manager_java">日志管理器</string>
+    <string name="ui_no_community_configs">还没有人分享社区配置。\n快从快捷方式菜单分享你的第一个配置吧！</string>
+    <string name="ui_no_containers">还没有容器\n\n点击上方 + 创建一个</string>
+    <string name="ui_no_internet">无网络连接。\n请检查网络设置。</string>
+    <string name="ui_no_matching_shortcuts">未找到匹配的快捷方式</string>
+    <string name="ui_none_text_only">无（仅文字）</string>
+    <string name="ui_no_save_folders">此游戏还没有存档文件夹。\n如果你知道存档位置，点击“添加文件夹”选择。</string>
+    <string name="ui_no_search">不，去搜索</string>
+    <string name="ui_nothing_to_restore">没有可恢复的内容</string>
+    <string name="ui_no_packages_in_source">此源中未找到 Wine 或 Proton 包。</string>
+    <string name="ui_no_runtime_best_perf">尚未安装 Wine 或 Proton 运行库。\n\n为获得最佳性能运行 Windows 游戏，请下载官方 Proton 10 运行库：</string>
+    <string name="ui_no_runtime_download_prompt">尚未安装 Wine 或 Proton 运行库。\n\n是否立即下载 Proton 10 arm64ec（推荐）？</string>
+    <string name="ui_no_runtime_installed">未安装 Wine 或 Proton 运行库。</string>
+    <string name="ui_times_played">已游玩次数: 0</string>
+    <string name="ui_opengl">OpenGL</string>
+    <string name="ui_player_slots">玩家插槽 (XInput 1–4)</string>
+    <string name="ui_playtime">游戏时长: 0d 00h 00m 00s</string>
+    <string name="ui_preconfigured_dxvk">预设 DXVK 配置</string>
+    <string name="ui_ram_booster">内存加速（LMK 触发）</string>
+    <string name="ui_remove_folder">移除文件夹？</string>
+    <string name="ui_restore_complete">恢复完成</string>
+    <string name="ui_retry_upper">重试</string>
+    <string name="ui_select_config">选择配置</string>
+    <string name="ui_select_icon">选择图标</string>
+    <string name="ui_select_archive_restore">选择要恢复的存档压缩包</string>
+    <string name="ui_select_save_folder">选择存档文件夹</string>
+    <string name="ui_share">分享</string>
+    <string name="ui_storage">存储</string>
+    <string name="ui_third_party_archive">第三方存档压缩包</string>
+    <string name="ui_universal_fps_limiter">通用帧率限制器</string>
+    <string name="ui_usage_instructions">使用说明</string>
+    <string name="ui_use_installed">使用已安装的</string>
+    <string name="ui_verified_save_backup">已验证的存档备份</string>
+    <string name="ui_welcome">欢迎使用 Winlator Mali</string>
+    <string name="ui_wine_proton_downloader">Wine 与 Proton 下载器</string>
+    <string name="ui_wine_runtime_notice">Wine 运行库提示</string>
+    <string name="ui_wine_runtime_required">需要 Wine 运行库</string>
+    <string name="ui_yes_upper">是</string>
+</resources>

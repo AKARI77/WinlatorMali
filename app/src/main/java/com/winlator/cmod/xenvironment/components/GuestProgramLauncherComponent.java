@@ -59,6 +59,18 @@ public class GuestProgramLauncherComponent extends EnvironmentComponent {
     private Container container;
     private final Shortcut shortcut;
 
+    /**
+     * The environment the guest was actually launched with. Kept so other components (the in-session
+     * AI assistant) can run diagnostic commands that see the same libraries and Wine paths as the
+     * game instead of the bare Android environment. Null until {@link #execGuestProgram()} runs.
+     */
+    private EnvVars sessionEnvVars;
+
+    /** @return the environment of the running guest, or an empty set before launch. */
+    public EnvVars getSessionEnvVars() {
+        return sessionEnvVars != null ? sessionEnvVars : new EnvVars();
+    }
+
     public void setWineInfo(WineInfo wineInfo) {
         this.wineInfo = wineInfo;
     }
@@ -536,6 +548,11 @@ public class GuestProgramLauncherComponent extends EnvironmentComponent {
         updatePrefixBeforeSession(execEnvVars, wineLauncher, rootDir, imageFs);
 
         Log.d("GuestLauncher", "Executing command: " + command);
+        // Snapshot for other components (AI diagnostics); copy so later mutations cannot race.
+        EnvVars snapshot = new EnvVars();
+        snapshot.putAll(execEnvVars);
+        sessionEnvVars = snapshot;
+
         return ProcessHelper.exec(command, execEnvVars.toStringArray(), rootDir, (status) -> {
             synchronized (lock) {
                 pid = -1;

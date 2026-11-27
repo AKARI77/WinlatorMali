@@ -47,7 +47,7 @@
             android:paddingEnd="6dp"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
-            android:hint="Label"
+            android:hint="@string/ui_label"
             android:singleLine="true"
             android:textSize="12sp" />
 

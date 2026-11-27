@@ -71,15 +71,15 @@ public class SaveManagerDialog extends ContentDialog {
 
         Button btnConfirm = findViewById(R.id.BTConfirm);
         Button btnCancel = findViewById(R.id.BTCancel);
-        if (btnConfirm != null) btnConfirm.setText("Export Backup");
-        if (btnCancel != null) btnCancel.setText("Close");
+        if (btnConfirm != null) btnConfirm.setText(R.string.ui_export_backup);
+        if (btnCancel != null) btnCancel.setText(R.string.ui_close);
         // The three icons have different intrinsic sizes, which made one pill taller than the others.
         sizeStartIcon(btnRestore, 18);
         sizeStartIcon(btnAddFolder, 18);
         limitListHeight();
 
         if (shortcut != null) {
-            tvSubtitle.setText("Save folders");
+            tvSubtitle.setText(R.string.ui_save_folders);
             btnAddFolder.setOnClickListener(v -> openFolderPicker());
             populateGameList(llSaveLocations, btnToggleAll);
 
@@ -118,7 +118,7 @@ public class SaveManagerDialog extends ContentDialog {
             });
 
         } else if (container != null) {
-            tvSubtitle.setText("Container profile saves");
+            tvSubtitle.setText(R.string.ui_container_profile_saves);
             if (btnToggleAll != null) btnToggleAll.setVisibility(View.GONE);
             btnAddFolder.setVisibility(View.GONE);
             ((LinearLayout.LayoutParams) btnRestore.getLayoutParams()).setMarginEnd(0);
@@ -150,7 +150,7 @@ public class SaveManagerDialog extends ContentDialog {
         if (discovered.isEmpty()) {
             if (btnToggleAll != null) btnToggleAll.setVisibility(View.GONE);
             TextView tvEmpty = new TextView(activity);
-            tvEmpty.setText("No save folders found for this game yet.\nIf you know where it saves, tap Add Folder to pick it.");
+            tvEmpty.setText(R.string.ui_no_save_folders);
             tvEmpty.setTextColor(0xFF888888);
             tvEmpty.setPadding(0, 24, 0, 24);
             llSaveLocations.addView(tvEmpty);
@@ -174,7 +174,7 @@ public class SaveManagerDialog extends ContentDialog {
 
             if (info.missing) {
                 showTag(tvTag, "Not found", 0xFFE5534B);
-                tvMeta.setText("Folder no longer exists");
+                tvMeta.setText(R.string.ui_folder_gone);
             } else {
                 if (info.custom) showTag(tvTag, "Added by you", 0xFF3D82FF);
                 else if (!info.suggested) showTag(tvTag, "Possible match", 0xFFD29922);
@@ -192,7 +192,7 @@ public class SaveManagerDialog extends ContentDialog {
             });
             if (info.custom) {
                 Runnable confirmRemove = () -> new AlertDialog.Builder(activity)
-                    .setTitle("Remove folder?")
+                    .setTitle(R.string.ui_remove_folder)
                     .setMessage("Stop including this folder in this game's save backups?\n\n" + info.friendlyPath + "\n\nNothing is deleted from storage.")
                     .setPositiveButton("Remove", (d, w) -> {
                         GameSaveBackup.removeCustomSaveDir(shortcut, info.directory);
@@ -294,7 +294,7 @@ public class SaveManagerDialog extends ContentDialog {
         }
 
         new AlertDialog.Builder(activity)
-            .setTitle("Select Save Archive to Restore")
+            .setTitle(R.string.ui_select_archive_restore)
             .setItems(displayItems.toArray(new String[0]), (dialog, which) -> {
                 if (which == 0) {
                     Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
@@ -344,7 +344,7 @@ public class SaveManagerDialog extends ContentDialog {
                             msg.append("\nRestore these saves into container '").append(container.getName()).append("'?");
 
                             new AlertDialog.Builder(activity)
-                                .setTitle("Verified Save Backup")
+                                .setTitle(R.string.ui_verified_save_backup)
                                 .setMessage(msg.toString())
                                 .setPositiveButton("Continue", (d, w) -> planAndRestore(opener))
                                 .setNegativeButton("Cancel", null)
@@ -360,7 +360,7 @@ public class SaveManagerDialog extends ContentDialog {
                             msg.append("\nDo you want to continue?");
 
                             new AlertDialog.Builder(activity)
-                                .setTitle("Third-Party Save Archive")
+                                .setTitle(R.string.ui_third_party_archive)
                                 .setMessage(msg.toString())
                                 .setPositiveButton("Continue", (d, w) -> planAndRestore(opener))
                                 .setNegativeButton("Cancel", null)
@@ -369,7 +369,7 @@ public class SaveManagerDialog extends ContentDialog {
                         }
                         case INVALID_NON_SAVE_ARCHIVE: {
                             new AlertDialog.Builder(activity)
-                                .setTitle("❌ Invalid Save Archive")
+                                .setTitle(R.string.ui_invalid_save_archive)
                                 .setMessage(inspection.errorMessage != null ? inspection.errorMessage : "The selected archive does not contain valid Windows or Wine save data.\n\nRestoration was cancelled to prevent container corruption.")
                                 .setPositiveButton("OK", null)
                                 .show();
@@ -390,7 +390,7 @@ public class SaveManagerDialog extends ContentDialog {
                 activity.runOnUiThread(() -> {
                     if (plan.fileCount() == 0) {
                         new AlertDialog.Builder(activity)
-                            .setTitle("Nothing to restore")
+                            .setTitle(R.string.ui_nothing_to_restore)
                             .setMessage(plan.rejected > 0
                                 ? plan.rejected + " file(s) in this backup belong outside this container (or to a game folder that couldn't be found), so they were not restored.\n\nIf they belong to a game installed outside drive C:, restore from that game's own Save Manager instead."
                                 : "This backup has no files to restore.")
@@ -448,7 +448,7 @@ public class SaveManagerDialog extends ContentDialog {
                     }
                     dismiss();
                     new AlertDialog.Builder(activity)
-                        .setTitle("Restore complete")
+                        .setTitle(R.string.ui_restore_complete)
                         .setMessage(msg.toString())
                         .setPositiveButton("OK", null)
                         .show();

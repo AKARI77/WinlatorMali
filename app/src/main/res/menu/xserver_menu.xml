@@ -38,6 +38,10 @@
             android:id="@+id/main_menu_logs"
             android:title="@string/logs" />
         <item
+            android:icon="@drawable/ic_ai_assistant"
+            android:id="@+id/main_menu_ai_assistant"
+            android:title="@string/ai_assistant_title" />
+        <item
             android:icon="@drawable/icon_exit"
             android:id="@+id/main_menu_exit"
             android:title="@string/exit" />

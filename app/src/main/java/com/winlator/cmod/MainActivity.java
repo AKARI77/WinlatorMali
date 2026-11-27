@@ -162,8 +162,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void showAllFilesAccessDialog() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
             new AlertDialog.Builder(this)
-                    .setTitle("All Files Access Required")
-                    .setMessage("In order to grant access to additional storage devices such as USB storage device, the All Files Access permission must be granted. Press Okay to grant All Files Access in your Android Settings.")
+                    .setTitle(R.string.ui_all_files_access_required)
+                    .setMessage(R.string.ui_all_files_access_rationale)
                     .setPositiveButton("Okay", (dialog, which) -> {
                         try {
                             Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);

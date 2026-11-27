@@ -25,7 +25,7 @@
             android:layout_height="42dp"
             android:layout_weight="1"
             android:id="@+id/ETName"
-            android:hint="VARIABLE_NAME"
+            android:hint="@string/ui_variable_name"
             android:singleLine="true" />
 
         <ImageButton
@@ -52,6 +52,6 @@
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:id="@+id/ETValue"
-        android:hint="Value"
+        android:hint="@string/ui_value"
         android:singleLine="true" />
 </LinearLayout>

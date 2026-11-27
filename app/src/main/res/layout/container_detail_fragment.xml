@@ -85,7 +85,7 @@
                         android:tag="section_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="General &amp; Display"
+                        android:text="@string/ui_general_and_display"
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textColor="?attr/colorAccent"
@@ -164,7 +164,7 @@
                                     android:textSize="16sp"
                                     android:layout_marginStart="4dp"
                                     android:layout_marginEnd="4dp"
-                                    android:text="x" />
+                                    android:text="@string/ui_x" />
 
                                 <EditText
                                     style="@style/AppTheme"
@@ -242,7 +242,7 @@
                         android:tag="section_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Graphics &amp; Rendering"
+                        android:text="@string/ui_graphics_and_rendering"
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textColor="?attr/colorAccent"
@@ -361,7 +361,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Configure BCN Texture Layer"
+                                android:text="@string/ui_configure_bcn_texture_layer"
                                 android:textSize="14sp"
                                 android:textColor="?attr/semanticOnSurface" />
 
@@ -383,7 +383,7 @@
                         android:tag="section_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="System &amp; Audio"
+                        android:text="@string/ui_system_and_audio"
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textColor="?attr/colorAccent"
@@ -582,7 +582,7 @@
                         android:tag="section_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="DirectInput"
+                        android:text="@string/ui_directinput"
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textColor="?attr/colorAccent"

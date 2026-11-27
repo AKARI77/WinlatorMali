@@ -173,7 +173,7 @@ public final class InGameControlsEditor implements View.OnClickListener {
     private void showGlobalOpacityDialog() {
         if (profile == null) return;
         ContentDialog dialog = new ContentDialog(activity);
-        dialog.setTitle("Global Controls Opacity");
+        dialog.setTitle(R.string.ui_global_controls_opacity);
         dialog.setIcon(R.drawable.icon_opacity);
 
         FrameLayout frameLayout = dialog.findViewById(R.id.FrameLayout);

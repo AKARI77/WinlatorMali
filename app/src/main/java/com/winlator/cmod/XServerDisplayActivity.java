@@ -59,6 +59,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.material.navigation.NavigationView;
+import com.winlator.cmod.ai.AiChatPanel;
+import com.winlator.cmod.ai.AiConfig;
+import com.winlator.cmod.ai.AiConversation;
+import com.winlator.cmod.ai.AiFloatingBall;
 import com.winlator.cmod.container.Container;
 import com.winlator.cmod.container.ContainerManager;
 import com.winlator.cmod.container.Shortcut;
@@ -244,6 +248,8 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
     );
     private RadialWheelManager radialWheelManager;
     private GuestProgramLauncherComponent guestProgramLauncherComponent;
+    private AiFloatingBall aiFloatingBall;
+    private AiChatPanel aiChatPanel;
     private EnvVars overrideEnvVars;
 
     private PowerManager.WakeLock wakeLock;
@@ -1002,6 +1008,11 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
         }
         com.winlator.cmod.core.RefreshRateUtils.onActivityDestroyed(this);
         com.winlator.cmod.perf.PerformanceManager.onGameStop(this);
+        if (aiChatPanel != null) {
+            aiChatPanel.destroy();
+            aiChatPanel = null;
+        }
+        aiFloatingBall = null;
         if (xServerView != null) xServerView.onDestroy();
         if (wakeLock != null && wakeLock.isHeld()) wakeLock.release();
         if (hudDataSource != null) {
@@ -1033,6 +1044,9 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
 
     @Override
     public void onBackPressed() {
+        // Back closes the AI panel first, so the user does not accidentally open the game menu.
+        if (aiChatPanel != null && aiChatPanel.onBackPressed()) return;
+
         if (inGameControlsEditor != null && inGameControlsEditor.isOpen()) {
             inGameControlsEditor.handleBack();
             return;
@@ -1088,6 +1102,18 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
             case R.id.main_menu_logs:
                 debugDialog.show();
                 drawerLayout.closeDrawers();
+                break;
+            case R.id.main_menu_ai_assistant:
+                drawerLayout.closeDrawers();
+                if (aiChatPanel == null) setupAiOverlay();
+                if (aiChatPanel != null) {
+                    if (!aiChatPanel.isShowing()) aiChatPanel.show();
+                    aiChatPanel.focusInput();
+                }
+                else {
+                    AppUtils.showToast(this, getString(R.string.ai_not_configured));
+                    com.winlator.cmod.ai.AiSettingsDialog.show(this, this::setupAiOverlay);
+                }
                 break;
             case R.id.main_menu_exit:
                 drawerLayout.closeDrawers();
@@ -1157,7 +1183,7 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
         frameRating.enableByUser();
 
         final ContentDialog dialog = new ContentDialog(this, R.layout.hud_config_dialog);
-        dialog.setTitle("HUD Settings");
+        dialog.setTitle(R.string.ui_hud_settings);
         dialog.setIcon(R.drawable.ic_hud);
 
         CheckBox cbEnable = dialog.findViewById(R.id.CBHudEnable);
@@ -1726,6 +1752,46 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
         }
 
         AppUtils.observeSoftKeyboardVisibility(drawerLayout, (cond) -> xServerView.setScreenOffsetYRelativeToCursor(cond));
+
+        setupAiOverlay();
+    }
+
+    /**
+     * Mounts the AI floating ball and its chat panel over the game surface.
+     *
+     * Added last so it sits above the HUD and the input controls in the frame layout's draw order;
+     * both views consume their own touches, so a tap on the ball never reaches Wine.
+     */
+    private void setupAiOverlay() {
+        if (!AiConfig.isEnabled(this)) return;
+
+        FrameLayout rootView = findViewById(R.id.FLXServerDisplay);
+        if (rootView == null) return;
+
+        AiConversation conversation = new AiConversation(
+                AiConversation.sessionFor(this, container, imageFs,
+                        guestProgramLauncherComponent != null
+                                ? guestProgramLauncherComponent.getSessionEnvVars()
+                                : null));
+
+        aiChatPanel = new AiChatPanel(this, rootView, conversation);
+        aiChatPanel.attach();
+
+        aiFloatingBall = new AiFloatingBall(this);
+        aiFloatingBall.setListener(new AiFloatingBall.Listener() {
+            @Override
+            public void onTap() {
+                aiChatPanel.toggle();
+                if (aiChatPanel.isShowing()) aiChatPanel.focusInput();
+            }
+
+            @Override
+            public void onMoved(float x, float y) {
+                AiConfig.setBallPosition(XServerDisplayActivity.this, x, y);
+            }
+        });
+        aiFloatingBall.attachTo(rootView);
+        aiFloatingBall.applyPosition(AiConfig.getBallX(this, -1f), AiConfig.getBallY(this, -1f));
     }
 
     /** Graphics enhancements for this launch: the game's own settings, else the container default. */
@@ -2502,6 +2568,12 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
+        // While the AI panel has the input focused, keys belong to it, not to Wine. Without this the
+        // EditText can never receive a keystroke: everything is routed to the X server below.
+        if (aiChatPanel != null && aiChatPanel.shouldCaptureKeys()) {
+            return super.dispatchKeyEvent(event);
+        }
+
         if (inputControlsView != null && inputControlsView.onKeyEvent(event)) {
             return true;
         }

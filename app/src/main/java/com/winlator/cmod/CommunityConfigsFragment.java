@@ -60,7 +60,7 @@ public class CommunityConfigsFragment extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         
         if (getActivity() != null) {
-            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Community Configs");
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.ui_community_configs);
         }
         
         ThemeManager.applyThemeToView(view, getContext());
@@ -116,12 +116,12 @@ public class CommunityConfigsFragment extends Fragment {
     private void loadGames() {
         if (!isNetworkAvailable()) {
             progressBar.setVisibility(View.GONE);
-            tvEmptyText.setText("No internet connection.\nPlease check your network settings.");
+            tvEmptyText.setText(R.string.ui_no_internet);
             llEmptyState.setVisibility(View.VISIBLE);
             return;
         }
 
-        tvEmptyText.setText("Loading games...");
+        tvEmptyText.setText(R.string.ui_loading_games);
         llEmptyState.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.VISIBLE);
         CommunityConfigManager.fetchGameList((games, maintenance) -> {
@@ -141,12 +141,12 @@ public class CommunityConfigsFragment extends Fragment {
                 } else if (games != null && games.length() == 0) {
                     fullGameList = games;
                     recyclerView.setAdapter(null);
-                    tvEmptyText.setText("No community configurations shared yet.\nBe the first to share your config from the Shortcuts menu!");
+                    tvEmptyText.setText(R.string.ui_no_community_configs);
                     llEmptyState.setVisibility(View.VISIBLE);
                 } else {
                     fullGameList = null;
                     recyclerView.setAdapter(null);
-                    tvEmptyText.setText("Failed to retrieve games list.\nPlease check your connection or server status.");
+                    tvEmptyText.setText(R.string.ui_failed_games_list);
                     llEmptyState.setVisibility(View.VISIBLE);
                 }
             });
@@ -260,7 +260,7 @@ public class CommunityConfigsFragment extends Fragment {
     private void showConfigSelectionDialog(String gameName, JSONArray configs) {
         ContentDialog dialog = new ContentDialog(getContext());
         dialog.getContentView().findViewById(R.id.BTConfirm).setVisibility(View.GONE);
-        dialog.setTitle("Select Config");
+        dialog.setTitle(R.string.ui_select_config);
 
         ListView listView = dialog.findViewById(R.id.ListView);
         listView.getLayoutParams().width = com.winlator.cmod.core.AppUtils.getPreferredDialogWidth(getContext());
@@ -291,7 +291,7 @@ public class CommunityConfigsFragment extends Fragment {
 
     private void showConfigDetailsDialog(String gameName, JSONObject configRef) {
         ContentDialog dialog = new ContentDialog(getContext(), R.layout.community_config_details_dialog);
-        dialog.setTitle("Configuration Details");
+        dialog.setTitle(R.string.ui_configuration_details);
         
         try {
             String title = configRef.optString("config_title", "");
@@ -436,7 +436,7 @@ public class CommunityConfigsFragment extends Fragment {
                 } catch (JSONException e) {}
             });
             
-            ((TextView)dialog.findViewById(R.id.BTConfirm)).setText("IMPORT");
+            ((TextView)dialog.findViewById(R.id.BTConfirm)).setText(R.string.ui_import_upper);
             dialog.show();
             
         } catch (Exception e) {}
@@ -572,7 +572,7 @@ public class CommunityConfigsFragment extends Fragment {
             if (!isInstalled) {
                 // The recommended runtime is not installed!
                 ContentDialog dialog = new ContentDialog(activity);
-                dialog.setTitle("Wine Runtime Notice");
+                dialog.setTitle(R.string.ui_wine_runtime_notice);
 
                 dialog.getContentView().setMinimumWidth((int) com.winlator.cmod.core.UnitUtils.dpToPx(330));
                 dialog.setCanceledOnTouchOutside(true);
@@ -584,7 +584,7 @@ public class CommunityConfigsFragment extends Fragment {
                             "Please download <b>" + requiredWine + "</b> from Contents to use this setup.";
                     dialog.setMessage(msg);
                     TextView btConfirm = dialog.findViewById(R.id.BTConfirm);
-                    btConfirm.setText("DOWNLOAD");
+                    btConfirm.setText(R.string.ui_download_upper);
                     dialog.setOnConfirmCallback(() -> {
                         WineDownloader.showDownloadDialog(activity, () -> {
                             checkWineAndConfirmImport(activity, root, notes);
@@ -613,11 +613,11 @@ public class CommunityConfigsFragment extends Fragment {
 
                     int padH = (int) com.winlator.cmod.core.UnitUtils.dpToPx(12);
                     TextView btConfirm = dialog.findViewById(R.id.BTConfirm);
-                    btConfirm.setText("DOWNLOAD");
+                    btConfirm.setText(R.string.ui_download_upper);
                     btConfirm.setPadding(padH, 0, padH, 0);
 
                     TextView btCancel = dialog.findViewById(R.id.BTCancel);
-                    btCancel.setText("USE INSTALLED");
+                    btCancel.setText(R.string.ui_use_installed);
                     btCancel.setPadding(padH, 0, padH, 0);
 
                     dialog.setOnConfirmCallback(() -> {
@@ -654,7 +654,7 @@ public class CommunityConfigsFragment extends Fragment {
                 }
 
                 ContentDialog dialog = new ContentDialog(activity);
-                dialog.setTitle("Import Configuration");
+                dialog.setTitle(R.string.ui_import_configuration);
                 dialog.setMessage(confirmMsg);
                 dialog.setOnConfirmCallback(() -> executeImport(activity, root));
                 dialog.show();
@@ -794,7 +794,7 @@ public class CommunityConfigsFragment extends Fragment {
                 if (idArray != null) for (int i = 0; i < idArray.length(); i++) ids.add(idArray.optString(i));
                 if (ids.isEmpty()) ids.add(gameId);
                 holder.itemView.setOnClickListener(v -> showConfigsForGames(displayName, ids));
-            } catch (JSONException e) { holder.tvGameName.setText("Error"); }
+            } catch (JSONException e) { holder.tvGameName.setText(R.string.ui_error); }
         }
 
         @Override public int getItemCount() { return games.length(); }

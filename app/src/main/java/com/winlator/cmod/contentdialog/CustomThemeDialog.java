@@ -55,7 +55,7 @@ public class CustomThemeDialog extends ContentDialog {
 
     public CustomThemeDialog(Context context) {
         super(context, R.layout.custom_theme_dialog);
-        setTitle("Customize Theme");
+        setTitle(R.string.ui_customize_theme);
         setIcon(R.drawable.icon_popup_menu_settings);
 
         selectedAccent = ThemeManager.getCustomAccentColor(context);

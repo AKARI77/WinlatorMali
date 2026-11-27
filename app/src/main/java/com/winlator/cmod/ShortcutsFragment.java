@@ -501,7 +501,7 @@ public class ShortcutsFragment extends Fragment {
                     tv.setText(R.string.no_items_to_display);
                     tv.setVisibility(View.VISIBLE);
                 } else if (data.isEmpty()) {
-                    tv.setText("No matching shortcuts found");
+                    tv.setText(R.string.ui_no_matching_shortcuts);
                     tv.setVisibility(View.VISIBLE);
                 } else {
                     tv.setVisibility(View.GONE);
@@ -771,10 +771,10 @@ public class ShortcutsFragment extends Fragment {
             // Step 1: If it's already tagged with a Steam ID, ask to confirm
             if (!steamId.isEmpty()) {
                 ContentDialog dialog = new ContentDialog(context);
-                dialog.setTitle("Confirm Game Info");
+                dialog.setTitle(R.string.ui_confirm_game_info);
                 dialog.setMessage("This configuration is tagged as:\n\n<b>" + currentName + "</b>\n\nIs this correct for the community?");
-                ((TextView)dialog.findViewById(R.id.BTConfirm)).setText("YES");
-                ((TextView)dialog.findViewById(R.id.BTCancel)).setText("NO, SEARCH");
+                ((TextView)dialog.findViewById(R.id.BTConfirm)).setText(R.string.ui_yes_upper);
+                ((TextView)dialog.findViewById(R.id.BTCancel)).setText(R.string.ui_no_search);
                 dialog.setOnConfirmCallback(() -> performCommunityUpload(shortcut, currentName, steamId, communityImage));
                 dialog.setOnCancelCallback(() -> {
                     showCommunitySearchPrompt(shortcut, currentName);
@@ -814,10 +814,10 @@ public class ShortcutsFragment extends Fragment {
                             final String finalSuggestedName = cleanGameName(currentName, pcgwName);
                             
                             ContentDialog dialog = new ContentDialog(context);
-                            dialog.setTitle("Confirm Game Info");
+                            dialog.setTitle(R.string.ui_confirm_game_info);
                             dialog.setMessage("Identified via EXE:\n\n<b>" + finalSuggestedName + "</b>\n\nIs this correct?");
-                            ((TextView)dialog.findViewById(R.id.BTConfirm)).setText("YES");
-                            ((TextView)dialog.findViewById(R.id.BTCancel)).setText("NO, SEARCH");
+                            ((TextView)dialog.findViewById(R.id.BTConfirm)).setText(R.string.ui_yes_upper);
+                            ((TextView)dialog.findViewById(R.id.BTCancel)).setText(R.string.ui_no_search);
                             dialog.setOnConfirmCallback(() -> searchGameForSharing(shortcut, finalSuggestedName, true));
                             dialog.setOnCancelCallback(() -> {
                                 showCommunitySearchPrompt(shortcut, currentName);
@@ -866,10 +866,10 @@ public class ShortcutsFragment extends Fragment {
                         final String finalSuggestedName = suggestedName;
 
                         ContentDialog dialog = new ContentDialog(context);
-                        dialog.setTitle("Confirm Game Info");
+                        dialog.setTitle(R.string.ui_confirm_game_info);
                         dialog.setMessage("Is this configuration for:\n\n<b>" + finalSuggestedName + "</b>?");
-                        ((TextView)dialog.findViewById(R.id.BTConfirm)).setText("YES");
-                        ((TextView)dialog.findViewById(R.id.BTCancel)).setText("NO, SEARCH");
+                        ((TextView)dialog.findViewById(R.id.BTConfirm)).setText(R.string.ui_yes_upper);
+                        ((TextView)dialog.findViewById(R.id.BTCancel)).setText(R.string.ui_no_search);
                         dialog.setOnConfirmCallback(() -> searchGameForSharing(shortcut, finalSuggestedName, true));
                         dialog.setOnCancelCallback(() -> {
                             showCommunitySearchPrompt(shortcut, currentName);
@@ -1023,7 +1023,7 @@ public class ShortcutsFragment extends Fragment {
             if (context == null) return;
 
             ContentDialog uploadDialog = new ContentDialog(context, R.layout.community_upload_dialog);
-            uploadDialog.setTitle("Community Upload");
+            uploadDialog.setTitle(R.string.ui_community_upload);
             
             final android.widget.EditText etTitle = uploadDialog.findViewById(R.id.ETConfigTitle);
             final android.widget.EditText etNotes = uploadDialog.findViewById(R.id.ETConfigNotes);
@@ -1077,7 +1077,7 @@ public class ShortcutsFragment extends Fragment {
             if (context == null) return;
 
             ContentDialog dialog = new ContentDialog(context, R.layout.shortcut_properties_dialog);
-            dialog.setTitle("Properties");
+            dialog.setTitle(R.string.ui_properties);
             dialog.setIcon(R.drawable.ic_nav_info);
 
             View cancelBtn = dialog.findViewById(R.id.BTCancel);
@@ -1144,8 +1144,8 @@ public class ShortcutsFragment extends Fragment {
             if (btnReset != null) {
                 btnReset.setOnClickListener(v -> {
                     playtimePrefs.edit().remove(playtimeKey).remove(playCountKey).apply();
-                    if (tvPlayCount != null) tvPlayCount.setText("Number of times played: 0");
-                    if (tvPlaytime != null) tvPlaytime.setText("Playtime: 0d 00h 00m 00s");
+                    if (tvPlayCount != null) tvPlayCount.setText(R.string.ui_times_played);
+                    if (tvPlaytime != null) tvPlaytime.setText(R.string.ui_playtime);
                     Toast.makeText(context, "Properties reset", Toast.LENGTH_SHORT).show();
                 });
             }
@@ -1606,7 +1606,7 @@ public class ShortcutsFragment extends Fragment {
             errorDialog.setMessage(message);
             if (reason == com.winlator.cmod.core.CoverArtManager.ErrorReason.NOT_FOUND || reason == com.winlator.cmod.core.CoverArtManager.ErrorReason.NETWORK_UNAVAILABLE) {
                 errorDialog.setOnConfirmCallback(() -> showArtSelectionDialog(shortcut, forHero));
-                ((TextView)errorDialog.findViewById(R.id.BTConfirm)).setText("RETRY");
+                ((TextView)errorDialog.findViewById(R.id.BTConfirm)).setText(R.string.ui_retry_upper);
             } else {
                 errorDialog.findViewById(R.id.BTCancel).setVisibility(View.GONE);
             }

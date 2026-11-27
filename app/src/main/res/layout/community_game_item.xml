@@ -61,7 +61,7 @@
                     android:textColor="#FFFFFF"
                     android:textSize="10sp"
                     android:textStyle="bold"
-                    android:text="Adreno 0"
+                    android:text="@string/ui_adreno_0"
                     android:layout_marginEnd="4dp"
                     android:visibility="gone"/>
 
@@ -74,7 +74,7 @@
                     android:textColor="#FFFFFF"
                     android:textSize="10sp"
                     android:textStyle="bold"
-                    android:text="Mali 0"
+                    android:text="@string/ui_mali_0"
                     android:visibility="gone"/>
             </LinearLayout>
         </FrameLayout>
@@ -95,7 +95,7 @@
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:minLines="2"
-                android:text="Game Name" />
+                android:text="@string/ui_game_name" />
 
             <TextView
                 android:id="@+id/TVSteamId"
@@ -104,7 +104,7 @@
                 android:textSize="11sp"
                 android:textColor="?android:attr/textColorSecondary"
                 android:alpha="0.7"
-                android:text="Steam ID: 12345" />
+                android:text="@string/ui_steam_id_12345" />
 
         </LinearLayout>
 

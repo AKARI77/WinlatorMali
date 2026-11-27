@@ -321,7 +321,7 @@ public class GraphicsEnhancementsDialog extends ContentDialog {
 
     private void showFrameGenInfo() {
         ContentDialog dialog = new ContentDialog(getContext(), R.layout.info_message_dialog);
-        dialog.setTitle("Frame Generation");
+        dialog.setTitle(R.string.ui_frame_generation);
         dialog.setIcon(R.drawable.ic_driver_info);
 
         TextView tvMessage = dialog.findViewById(R.id.TVInfoMessage);
@@ -350,7 +350,7 @@ public class GraphicsEnhancementsDialog extends ContentDialog {
 
     private void showFPSLimitInfo() {
         ContentDialog dialog = new ContentDialog(getContext(), R.layout.info_message_dialog);
-        dialog.setTitle("Universal FPS Limiter");
+        dialog.setTitle(R.string.ui_universal_fps_limiter);
         dialog.setIcon(R.drawable.ic_driver_info);
 
         TextView tvMessage = dialog.findViewById(R.id.TVInfoMessage);

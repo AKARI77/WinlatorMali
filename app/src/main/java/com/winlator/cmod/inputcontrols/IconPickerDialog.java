@@ -33,7 +33,7 @@ public class IconPickerDialog {
 
     public static void show(Context context, int currentIconId, OnIconSelectedCallback callback) {
         ContentDialog dialog = new ContentDialog(context);
-        dialog.setTitle("Select Icon");
+        dialog.setTitle(R.string.ui_select_icon);
         dialog.setIcon(R.drawable.icon_radial_wheel);
 
         FrameLayout frameLayout = dialog.findViewById(R.id.FrameLayout);
@@ -58,7 +58,7 @@ public class IconPickerDialog {
         boolean isDarkMode = preferences.getBoolean("dark_mode", true);
 
         Button btNoIcon = new Button(context);
-        btNoIcon.setText("None (Text Only)");
+        btNoIcon.setText(R.string.ui_none_text_only);
         btNoIcon.setTextSize(11);
         btNoIcon.setTextColor(isDarkMode ? android.graphics.Color.WHITE : android.graphics.Color.BLACK);
         LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
@@ -140,7 +140,7 @@ public class IconPickerDialog {
 
             // ── Section 2: Built-in Icons ──
             TextView tvBuiltinHeader = new TextView(context);
-            tvBuiltinHeader.setText("Built-in Icons");
+            tvBuiltinHeader.setText(R.string.ui_builtin_icons);
             tvBuiltinHeader.setTextSize(13);
             tvBuiltinHeader.setPadding(4, 12, 4, 4);
             tvBuiltinHeader.setTextColor(context.getResources().getColor(R.color.colorAccent));

@@ -98,7 +98,7 @@ public class LogManagerFragment extends Fragment {
         surface = ThemeManager.getSurfaceColor(context);
         content = view.findViewById(R.id.LLLogContent);
         if (getActivity() instanceof AppCompatActivity && ((AppCompatActivity) getActivity()).getSupportActionBar() != null)
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Log Manager");
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.ui_log_manager_java);
         build();
 
         String game = getArguments() != null ? getArguments().getString(ARG_GAME) : null;
@@ -364,7 +364,7 @@ public class LogManagerFragment extends Fragment {
         bar.setOrientation(LinearLayout.HORIZONTAL);
         bar.setGravity(Gravity.CENTER_VERTICAL);
         EditText find = new EditText(context);
-        find.setHint("Find");
+        find.setHint(R.string.ui_find);
         find.setSingleLine(true);
         find.setTextSize(13);
         find.setTextColor(onSurface);
@@ -425,7 +425,7 @@ public class LogManagerFragment extends Fragment {
         dialog.show();
         TextView confirm = dialog.findViewById(R.id.BTConfirm);
         if (confirm != null) {
-            if (file != null) confirm.setText("Share");
+            if (file != null) confirm.setText(R.string.ui_share);
             else confirm.setVisibility(View.GONE);
         }
     }

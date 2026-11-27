@@ -30,7 +30,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="?android:attr/textColorPrimary"
-            android:text="Optimized for Snap8Gen3"/>
+            android:text="@string/ui_optimized_for_snap8gen3"/>
 
         <TextView
             android:id="@+id/TVDeviceModel"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:textSize="13sp"
             android:textColor="?android:attr/textColorSecondary"
-            android:text="Samsung SM-S918B"/>
+            android:text="@string/ui_samsung_sm_s918b"/>
 
         <TextView
             android:id="@+id/TVGPUInfo"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:textSize="13sp"
             android:textColor="#2196F3"
-            android:text="Adreno 740"/>
+            android:text="@string/ui_adreno_740"/>
 
     </LinearLayout>
 

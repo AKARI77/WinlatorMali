@@ -368,7 +368,7 @@ public class VibrationTestDialog {
         View btCancel = dialog.findViewById(R.id.BTCancel);
         if (btCancel != null) btCancel.setVisibility(View.GONE);
         TextView btConfirm = dialog.findViewById(R.id.BTConfirm);
-        if (btConfirm != null) btConfirm.setText("Close");
+        if (btConfirm != null) btConfirm.setText(R.string.ui_close);
 
         dialog.setOnDismissListener((d) -> {
             stopAllVibrations.run();

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The AI chat panel. Shown over the game surface, so it must be compact and must not take the
+  whole screen: the user needs to watch the game react to whatever the assistant suggests.
+  Anchored top-right, 40% of the width, full height minus margins.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LLAiChatRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ai_chat_panel_bg"
+    android:elevation="12dp"
+    android:padding="10dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/TVAiTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ai_assistant_title"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TVAiStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:textColor="#9AB0C4"
+            android:textSize="11sp" />
+
+        <ImageButton
+            android:id="@+id/BTAiNewChat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/ai_new_chat"
+            android:src="@android:drawable/ic_menu_revert"
+            android:tint="#B8C7D6" />
+
+        <ImageButton
+            android:id="@+id/BTAiExport"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/ai_export_bundle"
+            android:src="@android:drawable/ic_menu_share"
+            android:tint="#B8C7D6" />
+
+        <ImageButton
+            android:id="@+id/BTAiSettings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/ai_settings"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:tint="#B8C7D6" />
+
+        <ImageButton
+            android:id="@+id/BTAiClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/ai_close"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#B8C7D6" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1FFFFFFF" />
+
+    <!-- Transcript -->
+    <ScrollView
+        android:id="@+id/SVAiMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/LLAiMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Quick prompts, shown only while the transcript is empty -->
+    <LinearLayout
+        android:id="@+id/LLAiQuickPrompts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/TVAiQuickCrash"
+            style="@style/AiQuickPrompt"
+            android:text="@string/ai_quick_crash" />
+
+        <TextView
+            android:id="@+id/TVAiQuickBlackScreen"
+            style="@style/AiQuickPrompt"
+            android:text="@string/ai_quick_black_screen" />
+
+        <TextView
+            android:id="@+id/TVAiQuickMissingDll"
+            style="@style/AiQuickPrompt"
+            android:text="@string/ai_quick_missing_dll" />
+
+        <TextView
+            android:id="@+id/TVAiQuickSlow"
+            style="@style/AiQuickPrompt"
+            android:text="@string/ai_quick_slow" />
+    </LinearLayout>
+
+    <!-- Composer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <EditText
+            android:id="@+id/ETAiInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ai_input_bg"
+            android:hint="@string/ai_input_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="4"
+            android:minHeight="40dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#7A8B9C"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/BTAiSend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/rounded_circle_bg"
+            android:contentDescription="@string/ai_send"
+            android:src="@android:drawable/ic_menu_send"
+            android:tint="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>

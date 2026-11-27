@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Body of the AI settings dialog; inflated into ContentDialog's FrameLayout. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="420dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_section_basics"
+            android:textAllCaps="true"
+            android:textColor="#8A9BAC"
+            android:textSize="11sp"
+            android:paddingBottom="6dp" />
+
+        <CheckBox
+            android:id="@+id/CBAiEnabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_enable"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_enable_desc"
+            android:textColor="#8A9BAC"
+            android:textSize="11sp"
+            android:paddingStart="8dp"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_base_url"
+            android:textSize="13sp"
+            android:paddingBottom="4dp" />
+
+        <EditText
+            android:id="@+id/ETAiBaseUrl"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:hint="@string/ai_base_url_hint"
+            android:importantForAutofill="no"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_base_url_help"
+            android:textColor="#8A9BAC"
+            android:textSize="11sp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_api_key"
+            android:textSize="13sp"
+            android:paddingBottom="4dp" />
+
+        <EditText
+            android:id="@+id/ETAiApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:hint="@string/ai_api_key_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_api_key_warning"
+            android:textColor="#D9A05B"
+            android:textSize="11sp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_model"
+            android:textSize="13sp"
+            android:paddingBottom="4dp" />
+
+        <EditText
+            android:id="@+id/ETAiModel"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:hint="@string/ai_model_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/BTAiTest"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/pill_button_background"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/ai_test_connection"
+            android:textAllCaps="false"
+            android:textColor="#8FC4FF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/TVAiTestResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingStart="4dp"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="#1FFFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_section_behaviour"
+            android:textAllCaps="true"
+            android:textColor="#8A9BAC"
+            android:textSize="11sp"
+            android:paddingBottom="6dp" />
+
+        <CheckBox
+            android:id="@+id/CBAiAutoDiagnose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_auto_diagnose"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_auto_diagnose_desc"
+            android:textColor="#8A9BAC"
+            android:textSize="11sp"
+            android:paddingStart="8dp"
+            android:paddingBottom="10dp" />
+
+        <CheckBox
+            android:id="@+id/CBAiAllowCommands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_allow_commands"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_allow_commands_desc"
+            android:textColor="#8A9BAC"
+            android:textSize="11sp"
+            android:paddingStart="8dp"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_max_tool_rounds"
+            android:textSize="13sp"
+            android:paddingBottom="4dp" />
+
+        <EditText
+            android:id="@+id/ETAiMaxRounds"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_max_tool_rounds_desc"
+            android:textColor="#8A9BAC"
+            android:textSize="11sp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_privacy_note"
+            android:textColor="#7A8B9C"
+            android:textSize="11sp"
+            android:paddingTop="6dp" />
+    </LinearLayout>
+</ScrollView>

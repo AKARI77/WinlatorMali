@@ -124,7 +124,7 @@ public class FileManagerFragment extends Fragment {
         
         if (getActivity() instanceof AppCompatActivity activity) {
             if (activity.getSupportActionBar() != null) {
-                if (pickFolderMode) activity.getSupportActionBar().setTitle("Select save folder");
+                if (pickFolderMode) activity.getSupportActionBar().setTitle(R.string.ui_select_save_folder);
                 else activity.getSupportActionBar().setTitle(R.string.file_manager);
             }
         }
@@ -467,16 +467,16 @@ public class FileManagerFragment extends Fragment {
             tvDriveName.setText(R.string.drive_c);
             ivDriveIcon.setImageResource(R.drawable.ic_drive_wine);
         } else if (Objects.equals(path, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath())) {
-            tvDriveName.setText("Drive D:");
+            tvDriveName.setText(R.string.ui_drive_d);
             ivDriveIcon.setImageResource(R.drawable.ic_drive_storage);
         } else if (Objects.equals(path, Environment.getExternalStorageDirectory().getAbsolutePath())) {
-            tvDriveName.setText("Internal Storage");
+            tvDriveName.setText(R.string.ui_internal_storage);
             ivDriveIcon.setImageResource(R.drawable.ic_drive_storage);
         } else if (path.startsWith(com.winlator.cmod.xenvironment.ImageFs.find(requireContext()).getRootDir().getAbsolutePath())) {
-            tvDriveName.setText("Drive Z:");
+            tvDriveName.setText(R.string.ui_drive_z);
             ivDriveIcon.setImageResource(R.drawable.ic_x11_icon);
         } else {
-            tvDriveName.setText("Storage");
+            tvDriveName.setText(R.string.ui_storage);
             ivDriveIcon.setImageResource(R.drawable.ic_drive_storage);
         }
     }
@@ -801,7 +801,7 @@ public class FileManagerFragment extends Fragment {
         };
 
         ContentDialog dialog = new ContentDialog(requireContext());
-        dialog.setTitle("File Conflict");
+        dialog.setTitle(R.string.ui_file_conflict);
         dialog.setMessage(message);
 
         android.widget.ListView listView = dialog.findViewById(R.id.ListView);
@@ -1090,7 +1090,7 @@ public class FileManagerFragment extends Fragment {
                 "• <b>Search:</b> Deep search files in the current folder.";
 
         ContentDialog dialog = new ContentDialog(requireContext());
-        dialog.setTitle("Usage Instructions");
+        dialog.setTitle(R.string.ui_usage_instructions);
         dialog.setMessage(html);
         dialog.findViewById(R.id.BTCancel).setVisibility(View.GONE);
         dialog.show();

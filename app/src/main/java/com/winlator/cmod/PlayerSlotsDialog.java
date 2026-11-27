@@ -27,7 +27,7 @@ public class PlayerSlotsDialog {
         if (winHandler == null) return;
 
         ContentDialog dialog = new ContentDialog(context, R.layout.player_slots_dialog);
-        dialog.setTitle("Player Slots (XInput 1–4)");
+        dialog.setTitle(R.string.ui_player_slots);
         dialog.setIcon(R.drawable.icon_controller);
 
         // --- Section 1: Connected Controllers ---
