@@ -69,7 +69,6 @@ public class AiFloatingBall extends View {
         setFocusable(false);
         setFocusableInTouchMode(false);
         // The X server surface must keep the focus; the ball only reacts to touch.
-        setDescendantFocusability(FOCUS_BLOCK_DESCENDANTS);
     }
 
     public void setListener(Listener listener) {
