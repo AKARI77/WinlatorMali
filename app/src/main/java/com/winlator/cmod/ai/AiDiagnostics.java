@@ -180,10 +180,10 @@ public final class AiDiagnostics {
         StringBuilder sb = new StringBuilder();
         sb.append("- imagefs 版本: ").append(imageFs.getVersion()).append('\n');
         sb.append("- Wine 路径: ").append(imageFs.getWinePath()).append('\n');
-        sb.append("- 前缀: ").append(imageFs.getWineprefix()).append('\n');
+        sb.append("- 前缀: ").append(imageFs.wineprefix).append('\n');
         sb.append("- 有效: ").append(imageFs.isValid() ? "是" : "否（环境可能未安装完整）").append('\n');
 
-        File driveC = new File(imageFs.getWineprefix(), "drive_c");
+        File driveC = new File(imageFs.wineprefix, "drive_c");
         if (driveC.isDirectory()) {
             File[] children = driveC.listFiles();
             if (children != null) {

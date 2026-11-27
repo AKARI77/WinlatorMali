@@ -116,7 +116,7 @@ public final class AiToolExecutor {
         // "missing component" complaints usually come down to.
         ImageFs imageFs = session.getImageFs();
         if (imageFs != null) {
-            File system32 = new File(imageFs.getWineprefix(), "drive_c/windows/system32");
+            File system32 = new File(imageFs.wineprefix, "drive_c/windows/system32");
             if (system32.isDirectory()) {
                 String[] interesting = {
                         "d3dx9_43.dll", "d3dx9_36.dll", "d3dcompiler_43.dll", "d3dcompiler_47.dll",
@@ -232,7 +232,7 @@ public final class AiToolExecutor {
         ImageFs imageFs = session.getImageFs();
         if (imageFs == null) return "ERROR: no imagefs bound to this session.";
 
-        File driveC = new File(imageFs.getWineprefix(), "drive_c");
+        File driveC = new File(imageFs.wineprefix, "drive_c");
         if (!driveC.isDirectory()) return "drive_c does not exist; the Wine prefix is not initialized.";
 
         StringBuilder sb = new StringBuilder();
