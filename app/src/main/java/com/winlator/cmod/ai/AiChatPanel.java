@@ -46,6 +46,7 @@ public class AiChatPanel implements AiConversation.Listener {
 
     private final Deque<TextView> pendingChips = new ArrayDeque<>();
     private ViewTreeObserver.OnGlobalLayoutListener keyboardListener;
+    private Runnable onSettingsSaved;
     private boolean exporting;
     private boolean showing;
 
@@ -188,11 +189,21 @@ public class AiChatPanel implements AiConversation.Listener {
 
     private void openSettings() {
         AiSettingsDialog.show(activity, () -> {
-            // The model or command access may have changed; rebuild the conversation from scratch.
-            detach();
-            attach();
-            if (showing) show();
+            // Let the host re-sync the overlay first: the assistant may have just been switched off,
+            // in which case this panel is gone by the time we get back here.
+            if (onSettingsSaved != null) onSettingsSaved.run();
+            if (root == null) return;
+
+            // Keep the chat history; only the model/key/command settings changed.
+            conversation.reloadConfig();
+            updateQuickPrompts();
+            statusView.setText(R.string.ai_ready);
         });
+    }
+
+    /** Called after the settings dialog is saved so the host can rebuild or remove the overlay. */
+    public void setOnSettingsSaved(Runnable callback) {
+        this.onSettingsSaved = callback;
     }
 
     private void exportBundle() {

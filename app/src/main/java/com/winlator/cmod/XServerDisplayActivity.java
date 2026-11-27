@@ -34,6 +34,7 @@ import android.view.MotionEvent;
 import android.view.PointerIcon;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -1008,11 +1009,7 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
         }
         com.winlator.cmod.core.RefreshRateUtils.onActivityDestroyed(this);
         com.winlator.cmod.perf.PerformanceManager.onGameStop(this);
-        if (aiChatPanel != null) {
-            aiChatPanel.destroy();
-            aiChatPanel = null;
-        }
-        aiFloatingBall = null;
+        teardownAiOverlay();
         if (xServerView != null) xServerView.onDestroy();
         if (wakeLock != null && wakeLock.isHeld()) wakeLock.release();
         if (hudDataSource != null) {
@@ -1763,7 +1760,13 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
      * both views consume their own touches, so a tap on the ball never reaches Wine.
      */
     private void setupAiOverlay() {
-        if (!AiConfig.isEnabled(this)) return;
+        if (!AiConfig.isEnabled(this)) {
+            // Turning the assistant off in settings should also remove the overlay.
+            teardownAiOverlay();
+            return;
+        }
+        // Called from setupUI and again after the settings dialog; never stack two overlays.
+        if (aiChatPanel != null) return;
 
         FrameLayout rootView = findViewById(R.id.FLXServerDisplay);
         if (rootView == null) return;
@@ -1776,6 +1779,7 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
 
         aiChatPanel = new AiChatPanel(this, rootView, conversation);
         aiChatPanel.attach();
+        aiChatPanel.setOnSettingsSaved(this::setupAiOverlay);
 
         aiFloatingBall = new AiFloatingBall(this);
         aiFloatingBall.setListener(new AiFloatingBall.Listener() {
@@ -1792,6 +1796,19 @@ public class XServerDisplayActivity extends AppCompatActivity implements Navigat
         });
         aiFloatingBall.attachTo(rootView);
         aiFloatingBall.applyPosition(AiConfig.getBallX(this, -1f), AiConfig.getBallY(this, -1f));
+    }
+
+    /** Removes the chat panel and the floating ball from the game frame layout. */
+    private void teardownAiOverlay() {
+        if (aiChatPanel != null) {
+            aiChatPanel.destroy();
+            aiChatPanel = null;
+        }
+        if (aiFloatingBall != null) {
+            ViewParent parent = aiFloatingBall.getParent();
+            if (parent instanceof ViewGroup) ((ViewGroup) parent).removeView(aiFloatingBall);
+            aiFloatingBall = null;
+        }
     }
 
     /** Graphics enhancements for this launch: the game's own settings, else the container default. */

@@ -762,6 +762,7 @@ E.g. <b>META</b> for <i>META key</i>, \n
     <string name="ai_testing">Testing…</string>
     <string name="ai_test_ok">Connected, the model responded.</string>
     <string name="ai_test_failed">Connection failed: </string>
+    <string name="ai_test_failed_save_hint">Your settings are kept - you can still save them.</string>
     <string name="ai_not_configured">Set an API Key in settings first.</string>
     <string name="ai_privacy_note">Your messages are sent to the endpoint you configured. Logs can contain file paths and usernames, so check them before sending.</string>
     <string name="ai_export_bundle">Export diagnostics</string>
@@ -1001,6 +1002,9 @@ E.g. <b>META</b> for <i>META key</i>, \n
     <string name="ui_builtin_icons">Built-in Icons</string>
     <string name="ui_close">Close</string>
     <string name="ui_community_configs">Community Configs</string>
+    <string name="ui_menu_emulation">Emulation</string>
+    <string name="ui_menu_tools_drivers">Tools &amp; Drivers</string>
+    <string name="ui_menu_system">System</string>
     <string name="ui_community_upload">Community Upload</string>
     <string name="ui_configuration_details">Configuration Details</string>
     <string name="ui_confirm_game_info">Confirm Game Info</string>

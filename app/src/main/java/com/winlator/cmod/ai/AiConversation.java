@@ -40,9 +40,14 @@ public final class AiConversation {
     private final AiClient client = new AiClient();
     private final List<AiMessage> history = new ArrayList<>();
     private final Handler main = new Handler(Looper.getMainLooper());
-    private final AiConfigSnapshot config;
     private final AiToolExecutor.Session session;
 
+    /**
+     * Frozen settings snapshot. Not final: the settings dialog can change the model, key or command
+     * access mid-session, and callers refresh it with {@link #reloadConfig()} instead of having to
+     * throw the whole conversation away (which would also lose the chat history).
+     */
+    private AiConfigSnapshot config;
     private Listener listener;
     private Call activeCall;
     private boolean busy;
@@ -55,6 +60,12 @@ public final class AiConversation {
         this.executor = new AiToolExecutor(session);
         this.config = AiConfigSnapshot.from(context);
         this.systemPrompt = AiDiagnostics.buildSystemPrompt(context, config.allowCommands);
+    }
+
+    /** Re-reads the settings and rebuilds the system prompt; history is preserved. */
+    public void reloadConfig() {
+        config = AiConfigSnapshot.from(context);
+        systemPrompt = AiDiagnostics.buildSystemPrompt(context, config.allowCommands);
     }
 
     public void setListener(Listener listener) {

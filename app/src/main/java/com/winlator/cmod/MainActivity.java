@@ -39,6 +39,7 @@ import androidx.preference.PreferenceManager;
 
 import com.google.android.material.navigation.NavigationView;
 import com.winlator.cmod.R;
+import com.winlator.cmod.ai.AiSettingsDialog;
 import com.winlator.cmod.contentdialog.ContentDialog;
 import com.winlator.cmod.core.AppUtils;
 import com.winlator.cmod.core.Callback;
@@ -218,7 +219,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    // Main sections L1/R1 cycle through, in drawer order (About is a dialog, not a section).
+    // Main sections L1/R1 cycle through, in drawer order (About and AI settings are dialogs, not sections).
     private static final int[] CONTROLLER_SECTIONS = {
         R.id.main_menu_shortcuts, R.id.main_menu_containers, R.id.main_menu_input_controls,
         R.id.main_menu_contents, R.id.main_menu_community_configs, R.id.main_menu_file_manager,
@@ -501,12 +502,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.main_menu_settings:
                 show(new SettingsFragment(), false);  // Forward animation
                 break;
+            case R.id.main_menu_ai_assistant:
+                AiSettingsDialog.show(this);
+                break;
             case R.id.main_menu_about:
                 showAboutDialog();
                 break;
         }
 
-        if (item.getItemId() != R.id.main_menu_about) {
+        if (item.getItemId() != R.id.main_menu_about && item.getItemId() != R.id.main_menu_ai_assistant) {
             NavigationView navigationView = findViewById(R.id.NavigationView);
             if (navigationView != null) {
                 navigationView.setCheckedItem(item.getItemId());

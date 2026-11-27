@@ -763,6 +763,7 @@
     <string name="ai_testing">测试中…</string>
     <string name="ai_test_ok">连接成功，模型已响应。</string>
     <string name="ai_test_failed">连接失败：</string>
+    <string name="ai_test_failed_save_hint">设置已保留，仍可正常保存。</string>
     <string name="ai_not_configured">请先在设置中填写 API 密钥。</string>
     <string name="ai_privacy_note">您的消息会发送到所配置的接口地址。日志可能包含文件路径和用户名，发送前请先检查。</string>
     <string name="ai_export_bundle">导出诊断包</string>
@@ -1002,6 +1003,9 @@
     <string name="ui_builtin_icons">内置图标</string>
     <string name="ui_close">关闭</string>
     <string name="ui_community_configs">社区配置</string>
+    <string name="ui_menu_emulation">模拟运行</string>
+    <string name="ui_menu_tools_drivers">工具与驱动</string>
+    <string name="ui_menu_system">系统</string>
     <string name="ui_community_upload">社区上传</string>
     <string name="ui_configuration_details">配置详情</string>
     <string name="ui_confirm_game_info">确认游戏信息</string>
